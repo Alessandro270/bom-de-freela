@@ -1,7 +1,9 @@
 <script lang="ts" setup></script>
 
 <template>
-  <header class="bg-slate-950 text-slate-50 h-20 px-20 flex items-center">
+  <header
+    class="bg-slate-950 fixed w-full text-slate-50 h-20 px-20 flex items-center"
+  >
     <UiLogo />
     <nav class="ml-auto flex">
       <ul class="flex space-x-4 font-medium">

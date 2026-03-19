@@ -1,7 +1,9 @@
 <template>
-  <div class="relative">
+  <div>
     <LayoutHeader />
-    <main class="min-h-screen px-20 py-14 bg-[#0b122d] h-screen text-slate-50">
+    <main
+      class="relative min-h-screen flex items-center justify-center px-20 py-14 text-slate-50 from-[#0b122d] to-purple-950 bg-linear-to-tl"
+    >
       <slot />
     </main>
     <LayoutFooter />

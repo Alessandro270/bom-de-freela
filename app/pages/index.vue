@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="h-[70vh] flex flex-col items-center justify-center">
+    <div class="h-[50vh] flex flex-col items-center justify-center">
       <h1 class="text-6xl font-extralight mb-6">
         <span class="block">Conectamos freelancers </span>
         <span
@@ -57,7 +57,7 @@
         />
       </ul>
     </div>
-    <div class="min-h-[40vh] flex flex-col items-center">
+    <div class="min-h-[50vh] flex flex-col items-center">
       <div class="text-center space-y-3 mb-10">
         <h1 class="text-3xl font-light">Como o Bom De Freela funciona</h1>
         <p>Simples, estruturado e eficiente</p>
@@ -107,7 +107,7 @@
         </li>
       </ul>
     </div>
-    <div class="min-h-[40vh] flex flex-col items-center">
+    <div class="min-h-[50vh] flex flex-col items-center">
       <div class="text-center space-y-3 mb-10">
         <h1 class="text-3xl font-light">O que os nossos clientes dizem</h1>
         <p>Se junte a varios clientes satisfeitos</p>

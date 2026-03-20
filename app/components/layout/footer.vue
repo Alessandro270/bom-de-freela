@@ -11,8 +11,14 @@
         <h2 class="text-sm font-semibold mb-3">Plataforma</h2>
         <ul class="text-slate-500 space-y-1.5 text-sm">
           <li>Publicar Projeto</li>
-          <li>Encontrar Freelancers</li>
-          <li>Categorias</li>
+          <li>Contratar freelancers</li>
+          <li>Começar agora</li>
+        </ul>
+      </div>
+      <div>
+        <h1 class="text-lg font-semibold mb-2">Empresa</h1>
+        <ul class="text-slate-500 space-y-1.5 font-medium text-sm">
+          <li>Sobre nós</li>
         </ul>
       </div>
       <div>

@@ -1,5 +1,5 @@
 <template>
-  <h1 class="font-semibold capitalize flex items-center space-x-2">
+  <NuxtLink to="/" class="font-semibold capitalize flex items-center space-x-2">
     <Icon
       name="line-md:briefcase-check-filled"
       class="text-purple-600"
@@ -7,5 +7,5 @@
       mode="svg"
     />
     <span class="inline-block text-xl">bom de freela</span>
-  </h1>
+  </NuxtLink>
 </template>

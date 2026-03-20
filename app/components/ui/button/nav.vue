@@ -4,7 +4,7 @@ defineProps<{ to: string }>();
 <template>
   <NuxtLink
     :to="to"
-    class="inline-block cursor-pointer hover:brightness-80 transition"
+    class="inline-block font-semibold cursor-pointer hover:brightness-80 transition"
   >
     <slot />
   </NuxtLink>

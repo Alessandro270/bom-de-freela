@@ -5,15 +5,18 @@
     class="bg-slate-950 w-full text-slate-50 h-20 px-20 flex items-center"
   >
     <UiLogo />
-    <nav class="ml-auto flex">
-      <ul class="flex space-x-4 font-medium">
-        <li><UiButtonNav to="/"> Sobre nós</UiButtonNav></li>
-        <li><UiButtonNav to="/">Como funciona</UiButtonNav></li>
-        <li><UiButtonNav to="/">Freelancers</UiButtonNav></li>
-        <li><UiButtonNav to="/">Suporte</UiButtonNav></li>
+    <nav class="ml-16">
+      <ul class="flex space-x-6">
+        <li>
+          <UiButtonNav to="/">Encontrar Propostas</UiButtonNav>
+        </li>
+        <li>
+          <UiButtonNav to="/">Encontrar Freelancers</UiButtonNav>
+        </li>
+        <li></li>
       </ul>
     </nav>
-    <ul class="flex space-x-6 items-center ml-30 font-semibold">
+    <ul class="flex space-x-6 items-center ml-auto font-semibold">
       <li>
         <UiButtonNav to="/auth/login">Entrar</UiButtonNav>
       </li>

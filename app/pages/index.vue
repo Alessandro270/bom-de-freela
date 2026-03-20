@@ -21,3 +21,10 @@
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+useHead({
+  title: 'Bom de Freela | A plataforma de freelancing de Angola',
+})
+</script>
+

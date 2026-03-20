@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="h-[50vh] flex flex-col items-center justify-center">
+    <div class="h-[70vh] flex flex-col items-center justify-center">
       <h1 class="text-6xl font-extralight mb-6">
         <span class="block">Conectamos freelancers </span>
         <span
@@ -19,7 +19,7 @@
         <UiButtonCta type="rev" to="/">Encontre propostas</UiButtonCta>
       </div>
     </div>
-    <div class="px-20 min-h-100 flex flex-col items-center">
+    <div class="min-h-[50vh] flex flex-col items-center">
       <div class="text-center space-y-3 mb-10">
         <h1 class="text-3xl font-light">Procure Por categorias</h1>
         <p>Encontre o profissional perfeito para o seu projeto</p>
@@ -31,30 +31,80 @@
           :clients="2456"
         />
         <UiCardSmall
-          name="hugeicons:laptop-programming"
+          name="iconoir:design-pencil"
           title="Design e multimédia"
           :clients="2430"
         />
         <UiCardSmall
-          name="hugeicons:laptop-programming"
+          name="material-symbols:language-chinese-dayi-rounded"
           title="Tradução e conteúdos"
           :clients="2545"
         />
         <UiCardSmall
-          name="hugeicons:laptop-programming"
+          name="icon-park-outline:weixin-market"
           title="Marketing e vendas"
           :clients="3212"
         />
         <UiCardSmall
-          name="hugeicons:laptop-programming"
+          name="solar:user-speak-bold"
           title="Suporte administrativo"
           :clients="7642"
         />
         <UiCardSmall
-          name="hugeicons:laptop-programming"
+          name="temaki:tools"
           title="Engenharia e manufatura"
           :clients="7351"
         />
+      </ul>
+    </div>
+    <div class="min-h-[40vh] flex flex-col items-center">
+      <div class="text-center space-y-3 mb-10">
+        <h1 class="text-3xl font-light">Como o Bom De Freela funciona</h1>
+        <p>Simples, estruturado e eficiente</p>
+      </div>
+      <ul class="grid grid-cols-3 w-1/2 font-medium">
+        <li class="flex flex-col items-center text-center gap-3">
+          <div
+            class="text-xl font-semibold h-14 rounded-full w-14 bg-purple-600 flex items-center justify-center"
+          >
+            <span class="inline-block">1</span>
+          </div>
+          <div class="text-sm flex flex-col gap-2">
+            <span class="font-semibold">Publique o seu projeto</span>
+            <p class="text-xs">
+              Descreva o que precisa, incluindo prazo e orçamento, para receber
+              propostas de freelancers.
+            </p>
+          </div>
+        </li>
+        <li class="flex flex-col items-center text-center gap-3">
+          <div
+            class="text-xl font-semibold h-14 rounded-full w-14 bg-purple-600 flex items-center justify-center"
+          >
+            <span class="inline-block">2</span>
+          </div>
+          <div class="text-sm flex flex-col gap-2">
+            <span class="font-semibold">Candidate-se a vagas</span>
+            <p class="text-xs">
+              Freelancers enviam propostas para projetos conforme suas
+              habilidades.
+            </p>
+          </div>
+        </li>
+        <li class="flex flex-col items-center text-center gap-3">
+          <div
+            class="text-xl font-semibold h-14 rounded-full w-14 bg-purple-600 flex items-center justify-center"
+          >
+            <span class="inline-block">3</span>
+          </div>
+          <div class="text-sm flex flex-col gap-2">
+            <span class="font-semibold">Dê um feedback</span>
+            <p class="text-xs">
+              Avalie a experiência para ajudar outros usuários e melhorar a
+              plataforma.
+            </p>
+          </div>
+        </li>
       </ul>
     </div>
   </div>

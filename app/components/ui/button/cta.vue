@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const props = defineProps<{ to: string; type?: "cta" | "rev" }>();
+const props = defineProps<{ to?: string; type?: "cta" | "rev" }>();
 const btnType = !props.type ? "cta" : props.type;
 const colors =
   btnType === "cta"
@@ -9,6 +9,7 @@ const colors =
 
 <template>
   <NuxtLink
+    :to="to ?? '/'"
     class="px-4 py-2 border-2 rounded-md cursor-pointer font-semibold transition"
     :class="colors"
   >

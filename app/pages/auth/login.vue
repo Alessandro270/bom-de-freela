@@ -14,7 +14,7 @@
         <h1 class="text-2xl font-semibold mb-2">Iniciar sessão</h1>
         <p>Embarque em novos projetos com o <strong>Bom De Freela</strong></p>
       </div>
-      <div class="w-full flex flex-col gap-4 mb-4">
+      <div class="w-full flex flex-col gap-4 mb-8">
         <UiInputGroup
           name="email"
           placeholder="exemplo@exemplo.com"
@@ -26,14 +26,10 @@
           title="Palavra passe"
           type="password"
         />
-        <div class="w-full text-right">
-          <UiLinkInline to="/auth/recover">Esqueceu a senha?</UiLinkInline>
-        </div>
-        <UiButtonCta class="w-full text-center block"
-          >Iniciar sessão</UiButtonCta
-        >
       </div>
-
+      <UiButtonCta class="w-full text-center block mb-4"
+        >Iniciar sessão</UiButtonCta
+      >
       <p>
         Ainda não possui uma conta?
         <UiLinkInline to="/auth/sign-up">Comece agora</UiLinkInline>

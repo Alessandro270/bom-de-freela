@@ -22,10 +22,10 @@ defineProps<{
         v-for="i in 5 - rating"
       />
     </span>
-    <p class="text-sm mb-3">
+    <p class="text-sm mb-3 text-justify">
       <slot />
     </p>
-    <div class="flex ml-auto space-x-3">
+    <div class="flex mt-auto ml-auto space-x-3">
       <div class="flex flex-col space-y-1 text-sm">
         <span class="font-semibold capitalize">{{ name }}</span>
         <span class="text-xs capitalize">{{ title }}</span>

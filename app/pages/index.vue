@@ -3,9 +3,9 @@
     <!-- Hero Section -->
     <section class="flex flex-col items-center justify-center text-center px-6 py-32">
       <h1 class="text-4xl md:text-5xl font-semibold mb-4">
-        A plataforma de prestação <br />
+        A plataforma digital de   <br />
         <span class="inline-block bg-linear-to-tr from-purple-700 to-orange-600 bg-clip-text text-transparent">
-          de serviços digitais
+          prestação  de serviços 
         </span>
         em Angola
       </h1>

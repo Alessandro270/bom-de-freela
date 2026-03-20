@@ -11,32 +11,27 @@
     </template>
     <template #form>
       <div class="mb-8 text-center">
-        <h1 class="text-2xl font-semibold mb-2">Iniciar sessão</h1>
-        <p>Embarque em novos projetos com o <strong>Bom De Freela</strong></p>
+        <h1 class="text-2xl font-semibold mb-2">Recuperar senha</h1>
+        <p>
+          Insira o email associado à sua conta e enviaremos um link para
+          redefinir a sua senha.
+        </p>
       </div>
       <div class="w-full flex flex-col gap-4 mb-4">
         <UiInputGroup
           name="email"
           placeholder="exemplo@exemplo.com"
           title="Email"
+          class="mb-4"
         />
-        <UiInputGroup
-          name="password"
-          placeholder="Sua senha"
-          title="Palavra passe"
-          type="password"
-        />
-        <div class="w-full text-right">
-          <UiLinkInline to="/auth/recover">Esqueceu a senha?</UiLinkInline>
-        </div>
         <UiButtonCta class="w-full text-center block"
-          >Iniciar sessão</UiButtonCta
+          >Enviar link de recuperação</UiButtonCta
         >
       </div>
 
       <p>
-        Ainda não possui uma conta?
-        <UiLinkInline to="/auth/sign-up">Comece agora</UiLinkInline>
+        Lembrou da senha?
+        <UiLinkInline to="/auth/login">Iniciar sessão</UiLinkInline>
       </p>
     </template>
   </LayoutAuth>

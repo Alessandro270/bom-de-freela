@@ -62,49 +62,20 @@
         <h1 class="text-3xl font-light">Como o Bom De Freela funciona</h1>
         <p>Simples, estruturado e eficiente</p>
       </div>
-      <ul class="grid grid-cols-3 w-1/2 font-medium">
-        <li class="flex flex-col items-center text-center gap-3">
-          <div
-            class="text-xl font-semibold h-14 rounded-full w-14 bg-purple-600 flex items-center justify-center"
-          >
-            <span class="inline-block">1</span>
-          </div>
-          <div class="text-sm flex flex-col gap-2">
-            <span class="font-semibold">Publique o seu projeto</span>
-            <p class="text-xs">
-              Descreva o que precisa, incluindo prazo e orçamento, para receber
-              propostas de freelancers.
-            </p>
-          </div>
-        </li>
-        <li class="flex flex-col items-center text-center gap-3">
-          <div
-            class="text-xl font-semibold h-14 rounded-full w-14 bg-purple-600 flex items-center justify-center"
-          >
-            <span class="inline-block">2</span>
-          </div>
-          <div class="text-sm flex flex-col gap-2">
-            <span class="font-semibold">Candidate-se a vagas</span>
-            <p class="text-xs">
-              Freelancers enviam propostas para projetos conforme suas
-              habilidades.
-            </p>
-          </div>
-        </li>
-        <li class="flex flex-col items-center text-center gap-3">
-          <div
-            class="text-xl font-semibold h-14 rounded-full w-14 bg-purple-600 flex items-center justify-center"
-          >
-            <span class="inline-block">3</span>
-          </div>
-          <div class="text-sm flex flex-col gap-2">
-            <span class="font-semibold">Dê um feedback</span>
-            <p class="text-xs">
-              Avalie a experiência para ajudar outros usuários e melhorar a
-              plataforma.
-            </p>
-          </div>
-        </li>
+      <ul class="grid grid-cols-3 gap-4 w-1/2 font-medium">
+        <UiCardStep title="Publique o seu projeto" :step="1">
+          Descreva o que precisa, incluindo prazo e orçamento, para receber
+          propostas de freelancers.
+        </UiCardStep>
+
+        <UiCardStep title="Candidate-se a vagas" :step="2">
+          Freelancers enviam propostas para projetos conforme suas habilidades.
+        </UiCardStep>
+
+        <UiCardStep title="Dê um feedback" :step="3">
+          Avalie a experiência para ajudar outros usuários e melhorar a
+          plataforma.
+        </UiCardStep>
       </ul>
     </div>
     <div class="min-h-[50vh] flex flex-col items-center">

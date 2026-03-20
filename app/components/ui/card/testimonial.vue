@@ -7,7 +7,7 @@ defineProps<{
 </script>
 
 <template>
-  <li class="flex flex-col h-48 rounded-md border border-slate-200 px-5 py-4">
+  <li class="flex flex-col h-48 rounded-md bg-slate-950 px-5 py-4">
     <span class="flex gap-0.5 mb-2">
       <Icon
         name="codicon:star-full"

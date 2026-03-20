@@ -28,7 +28,6 @@
         <h1 class="text-lg font-semibold mb-2">Empresa</h1>
         <ul class="text-slate-500 space-y-1.5 font-medium text-sm">
           <li>Sobre nós</li>
-          <li>Missão, visão e valores</li>
         </ul>
       </div>
 

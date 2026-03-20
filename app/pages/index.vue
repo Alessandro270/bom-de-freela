@@ -21,7 +21,7 @@
     </div>
     <div class="min-h-[50vh] flex flex-col items-center">
       <div class="text-center space-y-3 mb-10">
-        <h1 class="text-3xl font-light">Procure Por categorias</h1>
+        <h1 class="text-3xl font-light">Procure por categorias</h1>
         <p>Encontre o profissional perfeito para o seu projeto</p>
       </div>
       <ul class="grid grid-cols-3 gap-6 w-1/2">
@@ -105,6 +105,31 @@
             </p>
           </div>
         </li>
+      </ul>
+    </div>
+    <div class="min-h-[40vh] flex flex-col items-center">
+      <div class="text-center space-y-3 mb-10">
+        <h1 class="text-3xl font-light">O que os nossos clientes dizem</h1>
+        <p>Se junte a varios clientes satisfeitos</p>
+      </div>
+      <ul class="grid gap-6 grid-cols-3 w-2/3">
+        <UiCardTestimonial
+          name="Alessandro Almeida"
+          title="Deseonvolvedor backend"
+          :rating="5"
+        >
+          “Consegui vários trabalhos rapidamente. O sistema de propostas é
+          simples e ajuda bastante a conseguir novos clientes.”
+        </UiCardTestimonial>
+        <UiCardTestimonial name="Miguel Carlos" title="cliente" :rating="3">
+          “A plataforma facilitou muito a contratação. Encontrei um profissional
+          qualificado em pouco tempo e o projeto foi entregue com excelente
+          qualidade.”
+        </UiCardTestimonial>
+        <UiCardTestimonial name="Dário Freitas" title="cliente" :rating="4">
+          “O processo foi seguro e transparente. A comunicação com o freelancer
+          foi clara e o resultado final superou as expectativas.”
+        </UiCardTestimonial>
       </ul>
     </div>
   </div>

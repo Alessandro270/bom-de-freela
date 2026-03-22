@@ -5,11 +5,11 @@ definePageMeta({ layout: "app" });
 <template>
   <AppLayoutFreelancer>
     <AppUiHeaderProfile>reviews</AppUiHeaderProfile>
-    <ul>
-      <li>review 1</li>
-      <li>review 2</li>
-      <li>review 3</li>
-      <li>review 4</li>
+    <ul class="space-y-2">
+      <AppUiCardReview name="Alessandro Almeida" />
+      <AppUiCardReview name="Alessandro Almeida" />
+      <AppUiCardReview name="Alessandro Almeida" />
+      <AppUiCardReview name="Alessandro Almeida" />
     </ul>
   </AppLayoutFreelancer>
 </template>

@@ -4,10 +4,10 @@
     <nav class="ml-10 h-full">
       <ul class="flex items-center space-x-6 h-full">
         <li>
-          <AppUiLinkNav to="/app"> Propostas </AppUiLinkNav>
+          <AppUiLinkNav to="/app/proposals"> Propostas </AppUiLinkNav>
         </li>
         <li>
-          <AppUiLinkNav to="/app">Freelancers</AppUiLinkNav>
+          <AppUiLinkNav to="/app/freelancers">Freelancers</AppUiLinkNav>
         </li>
       </ul>
     </nav>

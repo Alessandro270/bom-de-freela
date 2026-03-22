@@ -1,3 +1,7 @@
+<script lang="ts" setup>
+defineProps<{ placeholder?: string }>();
+</script>
+
 <template>
   <div
     class="ml-auto bg-slate-950 px-4 py-2.5 space-x-2 w-full flex items-center rounded-full mr-6"
@@ -10,7 +14,7 @@
     </label>
     <input
       type="search"
-      placeholder="pesquisar propostas..."
+      :placeholder="placeholder ?? 'pesquisar...'"
       name="search"
       id="search"
       class="outline-0 w-full"

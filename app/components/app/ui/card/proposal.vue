@@ -28,11 +28,15 @@
     </div>
     <div class="flex space-x-4">
       <strong><i> tags:</i></strong>
-      <div class="flex space-x-4">
+      <div class="flex space-x-4 items-center">
         <AppUiButtonTag>Python</AppUiButtonTag>
         <AppUiButtonTag>Backend</AppUiButtonTag>
         <AppUiButtonTag>Pwa</AppUiButtonTag>
-        <Icon name="material-symbols:add-2" />
+        <span
+          class="flex items-center rounded-sm h-6 w-6 transition cursor-pointer justify-center hover:bg-purple-700"
+        >
+          <Icon name="material-symbols:add-2" class="leading-5 text-slate-50" />
+        </span>
       </div>
     </div>
     <div class="flex space-x-4 items-center">

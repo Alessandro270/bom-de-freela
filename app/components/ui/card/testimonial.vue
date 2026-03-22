@@ -8,7 +8,7 @@ defineProps<{
 
 <template>
   <li class="flex flex-col h-48 w-full rounded-md bg-slate-950 px-5 py-4">
-    <UiRating :value="rating" />
+    <UiRating :value="rating" class="mb-2" />
     <p class="text-sm mb-3 text-justify">
       <slot />
     </p>

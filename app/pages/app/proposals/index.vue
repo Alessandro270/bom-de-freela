@@ -3,7 +3,7 @@ definePageMeta({ layout: "app" });
 </script>
 
 <template>
-  <div class="flex min-h-screen space-x-10">
+  <div class="relative flex min-h-screen space-x-10">
     <AppLayoutCategoryBar />
 
     <main class="w-3/4 flex space-y-2 flex-col">

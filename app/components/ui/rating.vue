@@ -3,7 +3,7 @@ defineProps<{ value: number }>();
 </script>
 
 <template>
-  <span class="flex gap-0.5 mb-2">
+  <span class="flex items-center gap-0.5">
     <Icon
       name="codicon:star-full"
       class="text-amber-300"

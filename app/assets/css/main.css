@@ -3,5 +3,6 @@
 
 @theme inline {
   --font-sans: "Noto Sans", sans-serif;
+  --font-google: "Google Sans", sans-serif;
   --font-side: "Josefin Sans", sans-serif;
 }

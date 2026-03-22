@@ -7,21 +7,8 @@ defineProps<{
 </script>
 
 <template>
-  <li class="flex flex-col h-48 rounded-md bg-slate-950 px-5 py-4">
-    <span class="flex gap-0.5 mb-2">
-      <Icon
-        name="codicon:star-full"
-        class="text-amber-300"
-        :key="i"
-        v-for="i in rating"
-      />
-      <Icon
-        name="codicon:star-empty"
-        class="text-amber-300"
-        :key="i"
-        v-for="i in 5 - rating"
-      />
-    </span>
+  <li class="flex flex-col h-48 w-full rounded-md bg-slate-950 px-5 py-4">
+    <UiRating :value="rating" />
     <p class="text-sm mb-3 text-justify">
       <slot />
     </p>

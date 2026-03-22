@@ -24,7 +24,7 @@
         <h1 class="text-3xl font-light">Procure por categorias</h1>
         <p>Encontre o profissional perfeito para o seu projeto</p>
       </div>
-      <ul class="grid grid-cols-3 gap-6 w-1/2">
+      <ul class="grid grid-cols-3 gap-6 w-2/3">
         <UiCardSmall
           name="hugeicons:laptop-programming"
           title="TI e informática"
@@ -62,7 +62,7 @@
         <h1 class="text-3xl font-light">Como o Bom De Freela funciona</h1>
         <p>Simples, estruturado e eficiente</p>
       </div>
-      <ul class="grid grid-cols-3 gap-4 w-1/2 font-medium">
+      <ul class="grid grid-cols-3 gap-4 w-2/3 font-medium">
         <UiCardStep title="Publique o seu projeto" :step="1">
           Descreva o que precisa, incluindo prazo e orçamento, para receber
           propostas de freelancers.

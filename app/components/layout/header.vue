@@ -2,7 +2,7 @@
 
 <template>
   <header
-    class="bg-slate-950 w-full text-slate-50 h-20 px-20 flex items-center"
+    class="bg-slate-950 w-full text-slate-50 py-4 px-20 flex items-center"
   >
     <UiLogo />
     <nav class="ml-16">

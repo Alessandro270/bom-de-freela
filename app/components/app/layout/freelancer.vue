@@ -24,7 +24,12 @@ definePageMeta({ layout: "app" });
           </AppUiLinkProfileNav>
         </ul>
       </nav>
-      <slot />
+
+      <div
+        class="bg-slate-950 space-y-3 rounded-sm border border-slate-700 px-6 py-7"
+      >
+        <slot />
+      </div>
     </div>
     <aside
       class="w-1/4 h-max bg-slate-950 px-6 py-7 border border-slate-700 space-y-4"

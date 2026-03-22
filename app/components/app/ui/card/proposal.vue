@@ -16,7 +16,7 @@
       </div>
     </div>
     <div class="space-x-4">
-      <UiRating :value="0" class="mb-2" />
+      <UiRating :value="3" class="mb-2" />
       <AppUiButtonDesc title="publicado em" value="12" />
       <AppUiButtonDesc title="propostas" value="10" />
     </div>

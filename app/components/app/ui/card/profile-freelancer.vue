@@ -1,6 +1,6 @@
 <template>
-  <li
-    class="border flex flex-col border-slate-700 px-8 py-7 space-y-3 bg-slate-950 font-google rounded-md"
+  <div
+    class="border flex flex-col border-slate-700 px-8 py-7 space-y-6 bg-slate-950 font-google rounded-md"
   >
     <div class="flex items-center justify-between">
       <div class="space-x-8 flex">
@@ -10,7 +10,7 @@
           <span class="inline-block leading-5"> AA </span>
         </div>
         <div class="flex space-y-0.5 flex-col">
-          <span class="text-2xl text-slate-200">Alessandro Almeida</span>
+          <h1 class="text-3xl text-slate-200">Alessandro Almeida</h1>
           <span class="text-xl font-medium text-slate-400">
             Desenvolvedor backend
           </span>
@@ -19,38 +19,29 @@
           </div>
         </div>
       </div>
+
       <div class="self-start flex space-y-2 justify-start flex-col items-end">
         <AppUiButtonPrimary to="/app/freelancers/1" class="w-max px-5">
-          ver perfil
+          Enviar convite
         </AppUiButtonPrimary>
         <div class="flex flex-col items-end space-y-0.5">
           <AppUiButtonDesc title="por projeto" value="500 mil Kz" />
-          <AppUiButtonDesc title="projetos" value="12" />
         </div>
       </div>
     </div>
-
-    <div class="space-y-1">
-      <AppUiHeaderSide>Sobre mim</AppUiHeaderSide>
-      <p class="text-justify">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum sapiente
-        quia numquam hic. Consequatur vitae sit harum impedit esse, sapiente
-        aspernatur expedita. Obcaecati, voluptatem deleniti? Minima quis tenetur
-        maiores sint. <AppUiButtonMore />
-      </p>
+    <div class="space-x-6 text-md font-medium">
+      <span class="py-1 px-3 rounded-sm bg-purple-700">FREELANCER</span>
+      <span class="py-1 px-3 rounded-sm bg-purple-700">DESENVOLVIMENTO</span>
     </div>
-    <div class="flex space-x-4">
-      <strong><i> habilidades:</i></strong>
+    <hr class="text-slate-700" />
+
+    <div class="flex flex-col space-y-4">
+      <strong><i> habilidades principais:</i></strong>
       <div class="flex space-x-4 items-center">
         <AppUiButtonTag>Python</AppUiButtonTag>
         <AppUiButtonTag>Backend</AppUiButtonTag>
         <AppUiButtonTag>Pwa</AppUiButtonTag>
-        <span
-          class="flex items-center rounded-sm h-6 w-6 transition cursor-pointer justify-center hover:bg-purple-700"
-        >
-          <Icon name="material-symbols:add-2" class="leading-5 text-slate-50" />
-        </span>
       </div>
     </div>
-  </li>
+  </div>
 </template>

@@ -37,7 +37,9 @@
         />
       </li>
       <li>
-        <AppUiButtonAvatar name="Alessandro Almeida" />
+        <NuxtLink to="/app/profile">
+          <AppUiButtonAvatar name="Alessandro Almeida" />
+        </NuxtLink>
       </li>
     </ul>
   </header>

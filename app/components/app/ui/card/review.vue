@@ -3,9 +3,7 @@ defineProps<{ name: string }>();
 </script>
 
 <template>
-  <li
-    class="min-h-30 border-b space-y-2.5 text-justify border-slate-700 flex flex-col px-5 py-6"
-  >
+  <li class="min-h-30 space-y-2.5 text-justify flex flex-col px-5 py-6">
     <div class="flex space-x-4">
       <AppUiButtonAvatar :name="name" />
       <div>

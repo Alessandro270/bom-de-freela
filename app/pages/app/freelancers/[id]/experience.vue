@@ -5,11 +5,11 @@ definePageMeta({ layout: "app" });
 <template>
   <AppLayoutFreelancer>
     <AppUiHeaderProfile>experiencias</AppUiHeaderProfile>
-    <ul>
-      <li>experiencia 1</li>
-      <li>experiencia 2</li>
-      <li>experiencia 3</li>
-      <li>experiencia 4</li>
+    <ul class="space-y-2 *:not-last:border-b *:not-last:border-slate-700">
+      <AppUiCardExperience />
+      <AppUiCardExperience />
+      <AppUiCardExperience />
+      <AppUiCardExperience />
     </ul>
   </AppLayoutFreelancer>
 </template>

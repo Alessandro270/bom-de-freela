@@ -4,12 +4,15 @@ definePageMeta({ layout: "app" });
 
 <template>
   <AppLayoutFreelancer>
-    <AppUiHeaderProfile>habilidades</AppUiHeaderProfile>
-    <ul>
-      <li>habilidade 1</li>
-      <li>habilidade 2</li>
-      <li>habilidade 3</li>
-      <li>habilidade 4</li>
+    <AppUiHeaderProfile class="flex justify-between">
+      <span>habilidades</span>
+      <span class="text-slate-300 font-medium">(4)</span>
+    </AppUiHeaderProfile>
+    <ul class="*:not-last:border-b *:not-last:border-slate-700">
+      <AppUiCardSkill>python</AppUiCardSkill>
+      <AppUiCardSkill>javascript</AppUiCardSkill>
+      <AppUiCardSkill>css</AppUiCardSkill>
+      <AppUiCardSkill>html</AppUiCardSkill>
     </ul>
   </AppLayoutFreelancer>
 </template>

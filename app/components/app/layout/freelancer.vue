@@ -11,16 +11,16 @@ definePageMeta({ layout: "app" });
           class="grid grid-cols-4 gap-4 *:text-center font-google bg-slate-950 py-[0.39rem] rounded-sm px-1.5"
         >
           <AppUiLinkProfileNav to="/app/freelancers/1/">
-            sobre mim
+            Sobre mim
           </AppUiLinkProfileNav>
           <AppUiLinkProfileNav to="/app/freelancers/1/skills">
-            habilidades
+            Habilidades
           </AppUiLinkProfileNav>
           <AppUiLinkProfileNav to="/app/freelancers/1/reviews">
-            reviews
+            Avaliações
           </AppUiLinkProfileNav>
           <AppUiLinkProfileNav to="/app/freelancers/1/experience">
-            experiencia
+            Experiência
           </AppUiLinkProfileNav>
         </ul>
       </nav>
@@ -41,23 +41,15 @@ definePageMeta({ layout: "app" });
         <div class="space-y-2">
           <h3 class="text-slate-200 uppercase">Actividade</h3>
           <ul class="space-y-0.5">
-            <li class="text-slate-400 flex items-center justify-between">
-              <span>projetos em andamento:</span> <span>2</span>
-            </li>
-            <li class="text-slate-400 flex items-center justify-between">
-              <span>projetos concluídos:</span> <span>10</span>
-            </li>
+            <AppUiButtonSideDesc title="projetos em andamento" value="2" />
+            <AppUiButtonSideDesc title="projetos concluídos" value="10" />
           </ul>
         </div>
         <div class="space-y-2">
           <h3 class="text-slate-200 uppercase">informacao</h3>
           <ul>
-            <li class="text-slate-400 flex items-center justify-between">
-              <span>classificacoes:</span> <span>5</span>
-            </li>
-            <li class="text-slate-400 flex items-center justify-between">
-              <span>ingressou:</span> <span>há 2 anos</span>
-            </li>
+            <AppUiButtonSideDesc title="Classificações" value="5" />
+            <AppUiButtonSideDesc title="Membro desde" value="2023" />
           </ul>
         </div>
       </div>

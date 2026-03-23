@@ -3,7 +3,9 @@
     class="border flex flex-col border-slate-700 px-8 py-7 space-y-3 bg-slate-950 font-google rounded-md"
   >
     <div class="flex items-center justify-between">
-      <h1 class="text-5xl capitalize">titulo</h1>
+      <h1 class="text-5xl capitalize">
+        <NuxtLink to="/app/proposals/1"> titulo</NuxtLink>
+      </h1>
       <div class="flex space-y-2 justify-center flex-col items-end">
         <AppUiButtonPrimary class="w-max px-5">
           fazer proposta

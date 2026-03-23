@@ -8,8 +8,7 @@ definePageMeta({ layout: "app" });
       <div class="space-y-2">
         <h1 class="text-2xl font-medium">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo at,
-          ratione totam fugiat omnis nobis iste placeat, quidem soluta quia,
-          voluptate nam ipsam quisquam porro voluptas possimus dolore quasi ea!
+          ratione totam fugiat omnis nobis iste placeat.
         </h1>
         <div class="flex items-center gap-2">
           <UiRating :value="5" />
@@ -59,6 +58,23 @@ definePageMeta({ layout: "app" });
           </div>
         </div>
       </div>
+      <form>
+        <div class="mt-4 space-y-3">
+          <h2 class="text-xl uppercase font-medium">Enviar proposta</h2>
+          <textarea
+            placeholder="Escreva sua proposta aqui..."
+            class="w-full h-32 bg-slate-950 rounded-sm px-4 py-3 text-slate-300 focus:outline-none focus:ring-2 focus:ring-purple-700"
+          ></textarea>
+          <div class="flex items-center space-x-4">
+            <input
+              type="number"
+              placeholder="500,000.00 kz"
+              class="w-48 bg-slate-950 rounded-sm px-4 py-3 text-slate-300 focus:outline-none focus:ring-2 focus:ring-purple-700"
+            />
+            <AppUiButtonPrimary>Enviar Proposta</AppUiButtonPrimary>
+          </div>
+        </div>
+      </form>
     </div>
     <aside class="w-1/4 bg-slate-950 px-6 py-7 h-max rounded-sm space-y-4">
       <div class="space-y-4 border-b border-slate-700 pb-4">
@@ -68,7 +84,7 @@ definePageMeta({ layout: "app" });
           <AppUiButtonSideDesc title="Ultima proposta" value="há 2 horas" />
         </div>
       </div>
-      <div class="space-y-3">
+      <div class="space-y-4">
         <div class="flex h-max items-center space-x-4">
           <NuxtLink
             to="/app/proposals"
@@ -84,7 +100,7 @@ definePageMeta({ layout: "app" });
           </div>
         </div>
 
-        <div>
+        <div class="space-y-2">
           <AppUiButtonSideDesc title="Propostas publicadas" value="5" />
           <AppUiButtonSideDesc title="Membro desde" value="2023" />
         </div>

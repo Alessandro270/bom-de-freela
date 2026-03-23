@@ -37,7 +37,30 @@ definePageMeta({ layout: "app" });
       <div>
         <AppUiButtonPrimary>contratar</AppUiButtonPrimary>
       </div>
-      <div>FREELANCER ACTIVITY</div>
+      <div class="font-google font-medium text-md text-slate-400 space-y-4">
+        <div class="space-y-2">
+          <h3 class="text-slate-200 uppercase">Actividade</h3>
+          <ul class="space-y-0.5">
+            <li class="text-slate-400 flex items-center justify-between">
+              <span>projetos em andamento:</span> <span>2</span>
+            </li>
+            <li class="text-slate-400 flex items-center justify-between">
+              <span>projetos concluídos:</span> <span>10</span>
+            </li>
+          </ul>
+        </div>
+        <div class="space-y-2">
+          <h3 class="text-slate-200 uppercase">informacao</h3>
+          <ul>
+            <li class="text-slate-400 flex items-center justify-between">
+              <span>classificacoes:</span> <span>5</span>
+            </li>
+            <li class="text-slate-400 flex items-center justify-between">
+              <span>ingressou:</span> <span>há 2 anos</span>
+            </li>
+          </ul>
+        </div>
+      </div>
     </aside>
   </div>
 </template>

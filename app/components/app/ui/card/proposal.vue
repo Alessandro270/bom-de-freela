@@ -15,9 +15,9 @@
         </div>
       </div>
     </div>
-    <div class="space-x-4">
+    <div class="space-x-4 flex">
       <UiRating :value="3" class="mb-2" />
-      <AppUiButtonDesc title="publicado em" value="12" />
+      <AppUiButtonDesc title="publicado em" value="12/03/2023" />
       <AppUiButtonDesc title="propostas" value="10" />
     </div>
     <div class="space-y-1">

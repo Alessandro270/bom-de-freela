@@ -29,9 +29,10 @@
     <AppUiNavBar
       :items="[
         { to: '/app/profile/freelancer/', label: 'Sobre mim' },
-        { to: '/app/profile/freelancer/projects', label: 'Projetos' },
-        { to: '/app/profile/freelancer/reviews', label: 'Avaliações' },
-        { to: '/app/profile/freelancer/proposals', label: 'Propostas' },
+        { to: 'projects', label: 'Projetos' },
+        { to: 'reviews', label: 'Avaliações' },
+        { to: 'proposals', label: 'Propostas' },
+        { to: 'skills', label: 'Habilidades' },
       ]"
     />
     <div class="bg-slate-950 min-h-60 rounded-md px-6 py-7 space-y-4">

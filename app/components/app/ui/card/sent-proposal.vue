@@ -55,7 +55,7 @@ defineProps<{
       </p>
       <div class="flex items-center justify-end gap-2">
         <NuxtLink
-          :to="`/propostas/${id}/editar`"
+          :to="`proposals/${id}/edit`"
           class="text-xs text-slate-300 hover:text-white transition-colors"
         >
           Editar proposta

@@ -48,7 +48,7 @@ const sentProposals = [
 <template>
   <AppLayoutProfile>
     <AppLayoutProfileFreelancer>
-      <AppUiHeaderProfile class="flex">
+      <AppUiHeaderProfile class="flex justify-between">
         <span>PROPOSTAS</span>
         <span class="text-slate-400">(5)</span>
       </AppUiHeaderProfile>

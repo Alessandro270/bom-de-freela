@@ -4,10 +4,7 @@ defineProps<{ to: string }>();
 
 <template>
   <li>
-    <NuxtLink
-      :to="to"
-      class="inline-block w-full px-4 py-0.5 rounded-4xl font-medium"
-    >
+    <NuxtLink :to="to" class="block w-full px-4 py-0.5 rounded-4xl font-medium">
       <slot />
     </NuxtLink>
   </li>

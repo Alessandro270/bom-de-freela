@@ -6,24 +6,14 @@ definePageMeta({ layout: "app" });
   <div class="flex space-x-10">
     <div class="w-3/4 space-y-10">
       <AppUiCardProfileFreelancer />
-      <nav>
-        <ul
-          class="grid grid-cols-4 gap-4 *:text-center font-google bg-slate-950 py-[0.39rem] rounded-sm px-1.5"
-        >
-          <AppUiLinkProfileNav to="/app/freelancers/1/">
-            Sobre mim
-          </AppUiLinkProfileNav>
-          <AppUiLinkProfileNav to="/app/freelancers/1/skills">
-            Habilidades
-          </AppUiLinkProfileNav>
-          <AppUiLinkProfileNav to="/app/freelancers/1/reviews">
-            Avaliações
-          </AppUiLinkProfileNav>
-          <AppUiLinkProfileNav to="/app/freelancers/1/experience">
-            Experiência
-          </AppUiLinkProfileNav>
-        </ul>
-      </nav>
+      <AppUiNavBar
+        :items="[
+          { to: '/app/freelancers/1/', label: 'Sobre mim' },
+          { to: '/app/freelancers/1/skills', label: 'Habilidades' },
+          { to: '/app/freelancers/1/reviews', label: 'Avaliações' },
+          { to: '/app/freelancers/1/experience', label: 'Experiência' },
+        ]"
+      />
 
       <div
         class="bg-slate-950 space-y-3 rounded-sm border border-slate-700 px-6 py-7"

@@ -4,11 +4,7 @@
   >
     <div class="flex items-center justify-between">
       <div class="space-x-8 flex">
-        <div
-          class="py-8 min-w-24 rounded-md flex items-center justify-center font-bold text-4xl capitalize text-slate-50 bg-purple-700"
-        >
-          <span class="inline-block leading-5"> AA </span>
-        </div>
+        <AppUiButtonSquareAvatar name="Alessandro Almeida" />
         <div class="flex space-y-0.5 flex-col">
           <h1 class="text-3xl text-slate-200">Alessandro Almeida</h1>
           <span class="text-xl font-medium text-slate-400">

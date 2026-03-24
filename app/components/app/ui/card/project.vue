@@ -6,22 +6,20 @@ defineProps<{
   clientName: string;
   status: "em_progresso" | "concluido";
   id: string | number;
-  tags?: string[];
-  rating?: number;
 }>();
 </script>
 
 <template>
-  <div class="py-4 flex items-start border-b border-slate-700 justify-between">
-    <div class="flex-1 min-w-0 space-y-2">
+  <div class="py-4 flex items-startjustify-between">
+    <div class="space-y-2 flex-1 min-w-0">
       <h3 class="text-slate-100 font-bold text-sm uppercase leading-snug">
         {{ title }}
       </h3>
       <div class="flex space-x-4 items-center">
         <AppUiButtonSmallAvatar :name="clientName" />
 
-        <div class="flex flex-col">
-          <span class="text-slate-200 text-sm font-semibold">
+        <div>
+          <span class="text-slate-200 text-sm font-medium">
             {{ clientName }}
           </span>
           <div class="space-x-4">
@@ -42,8 +40,7 @@ defineProps<{
       </div>
     </div>
 
-    <!-- Right: meta + action -->
-    <div class="text-right h-17 flex flex-col justify-between">
+    <div class="text-right h-18 flex flex-col justify-between">
       <p class="text-slate-400 text-xs italic">
         estado:
         <span
@@ -54,10 +51,10 @@ defineProps<{
         </span>
       </p>
       <NuxtLink
-        :to="`/projetos/${id}`"
-        class="inline-block text-xs text-slate-300 hover:text-white transition-colors mt-1"
+        :to="`/app/profile/freelancer/projects/${id}`"
+        class="text-xs text-slate-300 hover:text-white transition-colors"
       >
-        ver detalhes
+        Ver detalhes
       </NuxtLink>
     </div>
   </div>

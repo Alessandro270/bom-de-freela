@@ -43,7 +43,7 @@ const projects = [
         <span>Projetos</span>
         <span class="text-slate-400"> (4)</span>
       </AppUiHeaderProfile>
-      <div class="space-y-4">
+      <div class="space-y-2 *:not-last:border-b *:not-last:border-slate-700">
         <AppUiCardProject
           v-for="project in projects"
           :key="project.id"

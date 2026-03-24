@@ -18,7 +18,9 @@
           <AppUiButtonTag>Pwa</AppUiButtonTag>
         </div>
       </div>
-      <AppUiLinkNav class="w-max text-sm"> ver proposta </AppUiLinkNav>
+      <AppUiLinkNav class="w-max text-sm" to="/app/profile/client/proposals/1">
+        ver proposta
+      </AppUiLinkNav>
     </div>
   </div>
 </template>

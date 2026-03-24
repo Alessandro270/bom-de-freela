@@ -3,7 +3,7 @@
     <div
       class="bg-slate-950 flex justify-between items-start rounded-md px-6 py-7 space-y-4"
     >
-      <div class="flex justify-between w-full">
+      <div class="flex justify-between items-start w-full h-full">
         <div class="space-x-8 flex">
           <AppUiButtonSquareAvatar name="Alessandro Almeida" />
           <div class="flex space-y-0.5 flex-col">
@@ -14,8 +14,16 @@
             </div>
           </div>
         </div>
-        <div class="items-start h-max space-x-4 w-1/5">
+        <div class="flex flex-col w-1/5 justify-between h-26 items-end">
           <AppUiButtonSideDesc title="Membro desde" value="2023" />
+          <div class="flex space-x-4">
+            <AppUiButtonSideSecondary to="/app/profile/client/edit">
+              Editar
+            </AppUiButtonSideSecondary>
+            <AppUiButtonSidePrimary to="/app/profile/client/proposals/new">
+              Postar Proposta
+            </AppUiButtonSidePrimary>
+          </div>
         </div>
       </div>
     </div>

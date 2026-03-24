@@ -1,3 +1,11 @@
+<script lang="ts" setup>
+definePageMeta({ layout: "app" });
+</script>
+
 <template>
-  <div>PAGINA DE PROPOSTAS DO FREELANCER</div>
+  <AppLayoutProfile>
+    <AppLayoutProfileFreelancer>
+      <div>PAGINA DE PROJETOS DO FREELANCER</div>
+    </AppLayoutProfileFreelancer>
+  </AppLayoutProfile>
 </template>

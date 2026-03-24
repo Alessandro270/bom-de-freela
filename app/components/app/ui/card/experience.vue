@@ -2,11 +2,7 @@
   <li class="py-4">
     <div class="flex items-start justify-between">
       <div class="flex items-center space-x-4 uppercase">
-        <div
-          class="h-10 w-10 rounded-sm font-semibold flex items-center justify-center bg-purple-700"
-        >
-          <span> EX </span>
-        </div>
+        <AppUiButtonSmallAvatar name="E X" />
         <div class="text-sm space-y-0.5">
           <h3 class="text-sm font-medium">desenvolvedor frontend</h3>
           <span class="text-sm text-slate-300">empresa x</span>

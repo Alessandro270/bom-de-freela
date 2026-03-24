@@ -4,7 +4,7 @@ defineProps<{ name: string }>();
 
 <template>
   <div
-    class="py-8 min-w-24 rounded-md flex items-center justify-center font-bold text-4xl capitalize text-slate-50 bg-purple-700"
+    class="py-6 min-w-24 rounded-xs flex items-center justify-center font-bold text-4xl capitalize text-slate-50 bg-purple-700"
   >
     <span class="inline-block leading-5">
       {{

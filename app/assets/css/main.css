@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 @import "tailwindcss";
+@import "@nuxt/ui";
 
 @theme inline {
   --font-sans: "Noto Sans", sans-serif;

@@ -6,14 +6,14 @@ definePageMeta({ layout: "app" });
   <AppLayoutProfile>
     <AppLayoutProfileFreelancer>
       <AppUiHeaderProfile class="flex justify-between">
-        <span>Habilidades</span>
+        <span>Experiencia</span>
         <span class="text-slate-400">(5)</span>
       </AppUiHeaderProfile>
       <ul class="*:not-last:border-b *:not-last:border-slate-700">
-        <AppUiCardSkill>python</AppUiCardSkill>
-        <AppUiCardSkill>javascript</AppUiCardSkill>
-        <AppUiCardSkill>css</AppUiCardSkill>
-        <AppUiCardSkill>html</AppUiCardSkill>
+        <AppUiCardExperience />
+        <AppUiCardExperience />
+        <AppUiCardExperience />
+        <AppUiCardExperience />
       </ul>
       <AppUiButtonSideSecondary>Editar</AppUiButtonSideSecondary>
     </AppLayoutProfileFreelancer>

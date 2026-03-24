@@ -33,6 +33,7 @@
         { to: 'reviews', label: 'Avaliações' },
         { to: 'proposals', label: 'Propostas' },
         { to: 'skills', label: 'Habilidades' },
+        { to: 'experience', label: 'Experiencia' },
       ]"
     />
     <div class="bg-slate-950 min-h-60 rounded-md px-6 py-7 space-y-4">

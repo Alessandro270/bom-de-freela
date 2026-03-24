@@ -1,5 +1,5 @@
 <template>
-  <div class="space-y-6 font-google max-w-5xl mx-auto">
+  <div class="space-y-6 font-google w-5xl mx-auto">
     <div
       class="bg-slate-950 flex justify-between items-start rounded-md px-6 py-7 space-y-4"
     >

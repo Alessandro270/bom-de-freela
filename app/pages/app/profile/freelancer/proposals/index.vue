@@ -48,7 +48,10 @@ const sentProposals = [
 <template>
   <AppLayoutProfile>
     <AppLayoutProfileFreelancer>
-      <div>PAGINA DE PROJETOS DO FREELANCER</div>
+      <AppUiHeaderProfile class="flex">
+        <span>PROPOSTAS</span>
+        <span class="text-slate-400">(5)</span>
+      </AppUiHeaderProfile>
       <div class="space-y-2 *:not-last:border-b *:not-last:border-slate-700">
         <AppUiCardSentProposal
           v-for="proposal in sentProposals"

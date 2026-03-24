@@ -5,10 +5,13 @@ defineProps<{ items: { to: string; label: string }[] }>();
 <template>
   <nav>
     <ul
-      class="grid gap-4 *:text-center font-google bg-slate-950 py-[0.39rem] rounded-sm px-1.5"
-      :class="`grid-cols-${items.length}`"
+      class="flex gap-4 grid-cols *:text-center font-google bg-slate-950 py-[0.39rem] rounded-sm px-1.5"
     >
-      <AppUiLinkProfileNav v-for="item in items" :to="item.to">
+      <AppUiLinkProfileNav
+        v-for="item in items"
+        :key="item.label"
+        :to="item.to"
+      >
         {{ item.label }}
       </AppUiLinkProfileNav>
     </ul>

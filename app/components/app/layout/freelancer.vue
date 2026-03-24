@@ -16,7 +16,7 @@ definePageMeta({ layout: "app" });
       />
 
       <div
-        class="bg-slate-950 space-y-3 rounded-sm border border-slate-700 px-6 py-7"
+        class="bg-slate-950 space-y-3 min-h-60 rounded-sm border border-slate-700 px-6 py-7"
       >
         <slot />
       </div>

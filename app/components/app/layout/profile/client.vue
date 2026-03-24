@@ -26,7 +26,7 @@
         { to: '/app/profile/client/reviews', label: 'Avaliações' },
       ]"
     />
-    <div class="bg-slate-950 rounded-md px-6 py-7 space-y-4">
+    <div class="bg-slate-950 min-h-60 rounded-md px-6 py-7 space-y-4">
       <slot />
     </div>
   </div>

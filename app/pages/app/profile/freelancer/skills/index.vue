@@ -42,24 +42,25 @@ const skills = reactive([
         </AppUiCardSkill>
       </ul>
       <UModal>
-        <UButton label="Editar" color="neutral" variant="subtle" />
+        <UButton label="Editar" color="neutral" variant="outline" />
+        <template #header>
+          <AppUiHeaderProfile>Editar habilidades</AppUiHeaderProfile>
+        </template>
         <template #body>
-          <AppLayoutWrapper title="Editar habilidade">
-            <UForm class="space-y-5">
-              <UFormField
-                :label="skill.name"
-                orientation="horizontal"
-                :key="skill.id"
-                v-for="skill in skills"
-              >
-                <AppUiButtonRating :rating="skill.value" />
-              </UFormField>
-              <div class="flex space-x-3 justify-end">
-                <AppUiButtonSideSecondary>Eliminar</AppUiButtonSideSecondary>
-                <AppUiButtonSidePrimary>Salvar</AppUiButtonSidePrimary>
-              </div>
-            </UForm>
-          </AppLayoutWrapper>
+          <UForm class="space-y-5">
+            <UFormField
+              :label="skill.name"
+              orientation="horizontal"
+              :key="skill.id"
+              v-for="skill in skills"
+            >
+              <AppUiButtonRating :rating="skill.value" />
+            </UFormField>
+            <div class="flex space-x-3 justify-end">
+              <AppUiButtonSideSecondary>Eliminar</AppUiButtonSideSecondary>
+              <AppUiButtonSidePrimary>Salvar</AppUiButtonSidePrimary>
+            </div>
+          </UForm>
         </template>
       </UModal>
     </AppLayoutProfileFreelancer>

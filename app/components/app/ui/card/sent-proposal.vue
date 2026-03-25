@@ -54,12 +54,33 @@ defineProps<{
         </span>
       </p>
       <div class="flex items-center justify-end gap-2">
-        <NuxtLink
-          :to="`proposals/${id}/edit`"
-          class="text-xs text-slate-300 hover:text-white transition-colors"
-        >
-          Editar proposta
-        </NuxtLink>
+        <UModal>
+          <UButton label="Editar proposta" color="neutral" variant="subtle" />
+          <template #body>
+            <AppLayoutWrapper title="Editar proposta">
+              <UForm class="space-y-4">
+                <UFormField label="Descrição" name="description">
+                  <UTextarea
+                    class="w-full"
+                    placeholder="Descrição da proposta"
+                  />
+                </UFormField>
+
+                <UFormField label="Preco inicial" name="startPrice">
+                  <UInputNumber
+                    class="w-full"
+                    placeholder="575,000.00 kz"
+                    orientation="vertical"
+                  />
+                </UFormField>
+                <div class="flex space-x-3 justify-end">
+                  <AppUiButtonSideSecondary>Eliminar</AppUiButtonSideSecondary>
+                  <AppUiButtonSidePrimary>Salvar</AppUiButtonSidePrimary>
+                </div>
+              </UForm>
+            </AppLayoutWrapper>
+          </template>
+        </UModal>
       </div>
     </div>
   </div>

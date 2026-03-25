@@ -15,7 +15,9 @@ definePageMeta({ layout: "app" });
         <AppUiCardSkill>css</AppUiCardSkill>
         <AppUiCardSkill>html</AppUiCardSkill>
       </ul>
-      <AppUiButtonSideSecondary>Editar</AppUiButtonSideSecondary>
+      <AppUiButtonSideSecondary to="/app/profile/freelancer/skills/edit">
+        Editar
+      </AppUiButtonSideSecondary>
     </AppLayoutProfileFreelancer>
   </AppLayoutProfile>
 </template>

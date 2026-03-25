@@ -17,9 +17,6 @@
         <div class="flex flex-col w-1/5 justify-between h-26 items-end">
           <AppUiButtonSideDesc title="Membro desde" value="2023" />
           <div class="flex space-x-4">
-            <AppUiButtonSideSecondary to="/app/profile/client/edit">
-              Editar
-            </AppUiButtonSideSecondary>
             <AppUiButtonSidePrimary to="/app/profile/client/proposals/new">
               Postar Proposta
             </AppUiButtonSidePrimary>

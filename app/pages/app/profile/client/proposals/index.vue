@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import App from "~/app.vue";
-
 definePageMeta({ layout: "app" });
 </script>
 

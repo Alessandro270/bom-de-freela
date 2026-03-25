@@ -44,6 +44,7 @@ const experience = [
           :end-year="exp.endYear"
           :company="exp.company"
           :role="exp.role"
+          edit
         />
       </ul>
     </AppLayoutProfileFreelancer>

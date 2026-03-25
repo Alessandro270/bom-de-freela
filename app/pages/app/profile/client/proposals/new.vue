@@ -114,6 +114,10 @@ const tags = ref([]);
       <UFormField label="Habilidades" name="skills">
         <UInputTags class="w-full" v-model="tags" placeholder="vue, pinia.." />
       </UFormField>
+      <UFormField label="prazo" name="skills">
+        <UInputDate class="w-full" />
+      </UFormField>
+
       <AppUiButtonPrimary type="submit" to="#" class="mt-3">
         Postar
       </AppUiButtonPrimary>

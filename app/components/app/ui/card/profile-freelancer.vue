@@ -31,13 +31,11 @@
     </div>
     <hr class="text-slate-700" />
 
-    <div class="flex flex-col space-y-4">
-      <strong><i> habilidades principais:</i></strong>
-      <div class="flex space-x-4 items-center">
-        <AppUiButtonTag>Python</AppUiButtonTag>
-        <AppUiButtonTag>Backend</AppUiButtonTag>
-        <AppUiButtonTag>Pwa</AppUiButtonTag>
-      </div>
+    <div class="flex space-x-4 items-center">
+      <i class="text-slate-300 inline-block font-semibold"> habilidades:</i>
+      <AppUiButtonTag>Python</AppUiButtonTag>
+      <AppUiButtonTag>Backend</AppUiButtonTag>
+      <AppUiButtonTag>Pwa</AppUiButtonTag>
     </div>
   </div>
 </template>

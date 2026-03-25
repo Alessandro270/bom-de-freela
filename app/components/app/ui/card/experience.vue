@@ -4,6 +4,7 @@ const props = defineProps<{
   company: string;
   startYear: string;
   endYear: string;
+  edit?: boolean;
 }>();
 </script>
 
@@ -29,7 +30,7 @@ const props = defineProps<{
       </span>
     </div>
 
-    <UModal>
+    <UModal v-if="edit">
       <UButton label="Editar" color="neutral" variant="outline" />
 
       <template #header>

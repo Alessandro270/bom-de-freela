@@ -3,5 +3,5 @@ definePageMeta({ layout: "app" });
 </script>
 
 <template>
-  <AppLayoutProfile> <div>pagina de perfil</div> </AppLayoutProfile>
+  <AppLayoutProfile> </AppLayoutProfile>
 </template>

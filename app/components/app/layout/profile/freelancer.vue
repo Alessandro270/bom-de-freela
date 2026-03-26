@@ -21,6 +21,7 @@ const skills = reactive([
     value: 5,
   },
 ]);
+const tags = ref([]);
 </script>
 
 <template>
@@ -51,8 +52,8 @@ const skills = reactive([
         <div class="space-y-2 flex justify-between">
           <div class="flex space-x-4 items-center">
             <i class="text-slate-300 inline-block font-semibold">
-              habilidades:</i
-            >
+              habilidades:
+            </i>
             <AppUiButtonTag>Python</AppUiButtonTag>
             <AppUiButtonTag>Backend</AppUiButtonTag>
             <AppUiButtonTag>Pwa</AppUiButtonTag>
@@ -60,21 +61,19 @@ const skills = reactive([
           <UModal>
             <UButton label="Editar" color="neutral" variant="outline" />
             <template #header>
-              <AppUiHeaderProfile>Editar habilidades</AppUiHeaderProfile>
+              <AppUiHeaderProfile
+                >Editar habilidades principais</AppUiHeaderProfile
+              >
             </template>
             <template #body>
               <UForm class="space-y-5">
-                <UFormField
-                  :label="skill.name"
-                  orientation="horizontal"
-                  :key="skill.id"
-                  v-for="skill in skills"
-                >
-                  <AppUiButtonRating :rating="skill.value" />
+                <UFormField label="Habilidades">
+                  <UInputTags v-model="tags" class="w-full" />
                 </UFormField>
                 <div class="flex space-x-3 justify-end">
-                  <AppUiButtonSideSecondary>Eliminar</AppUiButtonSideSecondary>
-                  <AppUiButtonSidePrimary>Salvar</AppUiButtonSidePrimary>
+                  <AppUiButtonSidePrimary type="submit">
+                    Salvar
+                  </AppUiButtonSidePrimary>
                 </div>
               </UForm>
             </template>

@@ -24,13 +24,16 @@ definePageMeta({ layout: "app" });
             <AppUiHeaderProfile> Editar sobre mim </AppUiHeaderProfile>
           </template>
           <template #body>
-            <UForm>
+            <UForm class="space-y-4 flex flex-col">
               <UTextarea
                 :rows="12"
                 :cols="20"
                 class="w-full"
                 placeholder="lorem ipsum dolor sit amet adiscipling.."
               />
+              <AppUiButtonSidePrimary class="self-end" type="submit">
+                Salvar
+              </AppUiButtonSidePrimary>
             </UForm>
           </template>
         </UModal>

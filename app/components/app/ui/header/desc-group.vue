@@ -1,14 +1,18 @@
 <script lang="ts" setup>
-defineProps<{ title: string; description: string }>();
+defineProps<{ title: string; description: string; reverse?: boolean }>();
 </script>
 
 <template>
   <div>
-    <span class="capitalize text-sm block text-slate-200 font-google">
+    <span
+      class="capitalize block font-google"
+      :class="reverse ? 'text-slate-400 text-xs' : 'text-slate-200 text-sm '"
+    >
       {{ title }}
     </span>
     <span
-      class="capitalize block text-slate-400 text-xs font-google font-light"
+      class="capitalize block font-google font-light"
+      :class="reverse ? 'text-slate-100 text-sm' : 'text-slate-400  text-xs'"
     >
       {{ description }}
     </span>

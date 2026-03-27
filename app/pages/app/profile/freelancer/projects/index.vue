@@ -43,7 +43,9 @@ const projects = [
       <!-- Cabeçalho da secção -->
       <div class="flex items-center justify-between mb-4">
         <div class="flex items-center gap-2">
-          <h2 class="text-sm font-semibold text-gray-700 dark:text-gray-300 uppercase tracking-wide">
+          <h2
+            class="text-sm font-semibold text-gray-700 dark:text-gray-300 uppercase tracking-wide"
+          >
             Projetos
           </h2>
           <UBadge color="neutral" variant="subtle" size="xs">
@@ -63,6 +65,7 @@ const projects = [
           :deadline="project.deadline"
           :client-name="project.clientName"
           :status="project.status"
+          :to="`/app/profile/freelancer/projects/${project.id}`"
         />
       </div>
     </AppLayoutProfileFreelancer>

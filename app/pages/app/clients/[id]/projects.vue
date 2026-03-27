@@ -54,6 +54,7 @@ const projects = [
         :deadline="project.deadline"
         :clientName="project.clientName"
         :status="project.status"
+        :to="`/app/proposals/${project.id}`"
       />
     </ul>
   </AppLayoutClientPublic>

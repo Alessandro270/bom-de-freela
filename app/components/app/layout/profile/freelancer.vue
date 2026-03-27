@@ -61,9 +61,9 @@ const tags = ref([]);
           <UModal>
             <UButton label="Editar" color="neutral" variant="outline" />
             <template #header>
-              <AppUiHeaderProfile
-                >Editar habilidades principais</AppUiHeaderProfile
-              >
+              <AppUiHeaderProfile>
+                Editar habilidades principais
+              </AppUiHeaderProfile>
             </template>
             <template #body>
               <UForm class="space-y-5">

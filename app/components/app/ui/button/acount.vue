@@ -42,47 +42,21 @@ const items = computed<DropdownMenuItem[][]>(() => [
     {
       label: "Perfil de Freelancer",
       icon: "i-lucide-briefcase",
-      to: "/app/profile/freelancer",
+      to: "/app/profile/freelancer/",
     },
     {
       label: "Perfil de Cliente",
       icon: "i-lucide-building-2",
-      to: "/app/profile/client",
+      to: "/app/profile/client/",
     },
   ],
 
   // Perfil e configurações
   [
     {
-      label: "O meu perfil",
-      icon: "i-lucide-circle-user",
-      to: "/profile",
-    },
-    {
       label: "Definições",
       icon: "i-lucide-settings",
-      to: "/settings",
-      kbds: [","],
-    },
-    {
-      label: "Faturação",
-      icon: "i-lucide-credit-card",
-      to: "/billing",
-    },
-  ],
-
-  // Suporte
-  [
-    {
-      label: "Ajuda & Suporte",
-      icon: "i-lucide-life-buoy",
-      to: "/support",
-    },
-    {
-      label: "Documentação",
-      icon: "i-lucide-book-open",
-      to: "https://docs.exemplo.com",
-      target: "_blank",
+      to: "/app/settings/",
     },
   ],
 
@@ -92,7 +66,6 @@ const items = computed<DropdownMenuItem[][]>(() => [
       label: "Terminar sessão",
       icon: "i-lucide-log-out",
       color: "error" as const,
-      kbds: ["shift", "meta", "q"],
       onSelect: logout,
     },
   ],

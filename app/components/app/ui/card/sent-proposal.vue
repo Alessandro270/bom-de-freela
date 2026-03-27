@@ -56,7 +56,7 @@ defineProps<{
       <div class="flex items-center justify-end gap-2">
         <UModal>
           <UButton label="Editar proposta" color="neutral" variant="subtle" />
-          <template #header>
+          <template #title>
             <AppUiHeaderProfile>Editar proposta</AppUiHeaderProfile>
           </template>
           <template #body>
@@ -72,11 +72,13 @@ defineProps<{
                   orientation="vertical"
                 />
               </UFormField>
-              <div class="flex space-x-3 justify-end">
-                <AppUiButtonSideSecondary>Eliminar</AppUiButtonSideSecondary>
-                <AppUiButtonSidePrimary>Salvar</AppUiButtonSidePrimary>
-              </div>
             </UForm>
+          </template>
+          <template #footer>
+            <div class="flex space-x-3 justify-end w-full">
+              <AppUiButtonSideSecondary>Eliminar</AppUiButtonSideSecondary>
+              <AppUiButtonSidePrimary>Salvar</AppUiButtonSidePrimary>
+            </div>
           </template>
         </UModal>
       </div>

@@ -31,15 +31,10 @@
     </div>
     <ul class="flex gap-4 items-center-safe justify-center">
       <li class="flex items-center">
-        <Icon
-          class="text-xl text-slate-50 h-full"
-          name="solar:bell-line-duotone"
-        />
+        <AppUiButtonNotifications />
       </li>
       <li>
-        <NuxtLink to="/app/profile">
-          <AppUiButtonAvatar name="Alessandro Almeida" />
-        </NuxtLink>
+        <AppUiButtonAcount />
       </li>
     </ul>
   </header>

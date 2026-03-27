@@ -9,10 +9,10 @@ definePageMeta({ layout: "app" });
       <span class="text-slate-300 font-medium">(4)</span>
     </AppUiHeaderProfile>
     <ul class="*:not-last:border-b *:not-last:border-slate-700">
-      <AppUiCardSkill>python</AppUiCardSkill>
-      <AppUiCardSkill>javascript</AppUiCardSkill>
-      <AppUiCardSkill>css</AppUiCardSkill>
-      <AppUiCardSkill>html</AppUiCardSkill>
+      <AppUiCardSkill :value="4">python</AppUiCardSkill>
+      <AppUiCardSkill :value="5">javascript</AppUiCardSkill>
+      <AppUiCardSkill :value="5">css</AppUiCardSkill>
+      <AppUiCardSkill :value="4">html</AppUiCardSkill>
     </ul>
   </AppLayoutFreelancer>
 </template>

@@ -172,7 +172,7 @@ const statuses = ref<Record<number, "accepted" | "rejected" | null>>(
           </div>
           <UModal>
             <UButton label="Editar" color="neutral" variant="subtle" />
-            <template #header>
+            <template #title>
               <AppUiHeaderProfile>Editar proposta</AppUiHeaderProfile>
             </template>
             <template #body>
@@ -217,13 +217,20 @@ const statuses = ref<Record<number, "accepted" | "rejected" | null>>(
                 <UFormField label="prazo" name="skills">
                   <UInputDate class="w-full" />
                 </UFormField>
-                <div class="flex space-x-3 justify-end">
-                  <AppUiButtonSideSecondary>Eliminar</AppUiButtonSideSecondary>
-                  <AppUiButtonSidePrimary type="submit">
-                    Salvar
-                  </AppUiButtonSidePrimary>
-                </div>
               </UForm>
+            </template>
+            <template #footer>
+              <div class="flex w-full space-x-3 justify-end">
+                <UModal>
+                  <AppUiButtonSideSecondary>Eliminar</AppUiButtonSideSecondary>
+                  <template #content>
+                    <AppUiCardConfirm />
+                  </template>
+                </UModal>
+                <AppUiButtonSidePrimary type="submit">
+                  Salvar
+                </AppUiButtonSidePrimary>
+              </div>
             </template>
           </UModal>
         </div>

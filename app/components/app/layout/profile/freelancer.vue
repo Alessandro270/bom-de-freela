@@ -70,12 +70,12 @@ const tags = ref([]);
                 <UFormField label="Habilidades">
                   <UInputTags v-model="tags" class="w-full" />
                 </UFormField>
-                <div class="flex space-x-3 justify-end">
-                  <AppUiButtonSidePrimary type="submit">
-                    Salvar
-                  </AppUiButtonSidePrimary>
-                </div>
               </UForm>
+            </template>
+            <template #footer>
+              <AppUiButtonSidePrimary class="ml-auto" type="submit">
+                Salvar
+              </AppUiButtonSidePrimary>
             </template>
           </UModal>
         </div>
@@ -84,11 +84,11 @@ const tags = ref([]);
     <AppUiNavBar
       :items="[
         { to: '/app/profile/freelancer/', label: 'Sobre mim' },
-        { to: 'projects', label: 'Projetos' },
-        { to: 'reviews', label: 'Avaliações' },
-        { to: 'proposals', label: 'Propostas' },
-        { to: 'skills', label: 'Habilidades' },
-        { to: 'experience', label: 'Experiencia' },
+        { to: '/app/profile/freelancer/projects', label: 'Projetos' },
+        { to: '/app/profile/freelancer/reviews', label: 'Avaliações' },
+        { to: '/app/profile/freelancer/proposals', label: 'Propostas' },
+        { to: '/app/profile/freelancer/skills', label: 'Habilidades' },
+        { to: '/app/profile/freelancer/experience', label: 'Experiencia' },
       ]"
     />
     <div class="bg-slate-950 min-h-60 rounded-md px-6 py-7 space-y-4">

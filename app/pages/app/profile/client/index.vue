@@ -20,7 +20,7 @@ definePageMeta({ layout: "app" });
             color="neutral"
             variant="outline"
           />
-          <template #header>
+          <template #title>
             <AppUiHeaderProfile> Editar sobre mim </AppUiHeaderProfile>
           </template>
           <template #body>
@@ -31,10 +31,12 @@ definePageMeta({ layout: "app" });
                 class="w-full"
                 placeholder="lorem ipsum dolor sit amet adiscipling.."
               />
-              <AppUiButtonSidePrimary class="self-end" type="submit">
-                Salvar
-              </AppUiButtonSidePrimary>
             </UForm>
+          </template>
+          <template #footer>
+            <AppUiButtonSidePrimary class="ml-auto" type="submit">
+              Salvar
+            </AppUiButtonSidePrimary>
           </template>
         </UModal>
       </div>

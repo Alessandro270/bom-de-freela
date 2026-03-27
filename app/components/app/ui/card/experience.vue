@@ -33,7 +33,7 @@ const props = defineProps<{
     <UModal v-if="edit">
       <UButton label="Editar" color="neutral" variant="outline" />
 
-      <template #header>
+      <template #title>
         <AppUiHeaderProfile>Editar experiencia</AppUiHeaderProfile>
       </template>
 
@@ -53,11 +53,13 @@ const props = defineProps<{
               <UInputDate />
             </UFormField>
           </div>
-          <div class="flex space-x-3 justify-end">
-            <AppUiButtonSideSecondary>Eliminar</AppUiButtonSideSecondary>
-            <AppUiButtonSidePrimary>Salvar</AppUiButtonSidePrimary>
-          </div>
         </UForm>
+      </template>
+      <template #footer>
+        <div class="flex space-x-3 justify-end w-full">
+          <AppUiButtonSideSecondary>Eliminar</AppUiButtonSideSecondary>
+          <AppUiButtonSidePrimary>Salvar</AppUiButtonSidePrimary>
+        </div>
       </template>
     </UModal>
   </li>

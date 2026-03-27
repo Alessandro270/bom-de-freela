@@ -35,7 +35,7 @@ async function marcarConcluido() {
       </div>
 
       <!-- Cabeçalho do projecto -->
-      <UCard variant="subtle" class="border border-white/5">
+      <UCard variant="outline" class="border border-white/5">
         <template #header>
           <div class="space-y-3 py-1">
             <h1 class="text-xl font-semibold text-slate-100 leading-snug">
@@ -58,19 +58,19 @@ async function marcarConcluido() {
 
       <!-- Métricas -->
       <div class="grid grid-cols-3 gap-4">
-        <UCard variant="subtle" class="border border-white/5">
+        <UCard variant="outline" class="border border-white/5">
           <AppUiHeaderDescGroup
             title="Valor do contrato"
             description="AOA 250.000"
           />
         </UCard>
-        <UCard variant="subtle" class="border border-white/5">
+        <UCard variant="outline" class="border border-white/5">
           <AppUiHeaderDescGroup
             title="Prazo de entrega"
             description="30 dias"
           />
         </UCard>
-        <UCard variant="subtle" class="border border-white/5">
+        <UCard variant="outline" class="border border-white/5">
           <AppUiHeaderDescGroup title="Aceite em" description="15/03/2026" />
         </UCard>
       </div>
@@ -97,7 +97,7 @@ async function marcarConcluido() {
       </div>
 
       <!-- Descrição + Habilidades + Datas -->
-      <UCard variant="subtle" class="border border-white/5">
+      <UCard variant="outline" class="border border-white/5">
         <template #header>
           <AppUiHeaderSubtle size="md">Detalhes do contrato</AppUiHeaderSubtle>
         </template>
@@ -151,25 +151,42 @@ async function marcarConcluido() {
               Habilidades requeridas
             </p>
             <div class="flex flex-wrap gap-2">
-              <UBadge color="primary" variant="soft" size="sm">Vue.js</UBadge>
-              <UBadge color="primary" variant="soft" size="sm">Node.js</UBadge>
-              <UBadge color="primary" variant="soft" size="sm"
+              <UBadge color="neutral" variant="outline" size="sm"
+                >Vue.js</UBadge
+              >
+              <UBadge color="neutral" variant="outline" size="sm"
+                >Node.js</UBadge
+              >
+              <UBadge color="neutral" variant="outline" size="sm"
                 >PostgreSQL</UBadge
               >
-              <UBadge color="primary" variant="soft" size="sm"
+              <UBadge color="neutral" variant="outline" size="sm"
                 >UI/UX Design</UBadge
               >
-              <UBadge color="primary" variant="soft" size="sm">API REST</UBadge>
-              <UBadge color="primary" variant="soft" size="sm">Nuxt.js</UBadge>
+              <UBadge color="neutral" variant="outline" size="sm"
+                >API REST</UBadge
+              >
+              <UBadge color="neutral" variant="outline" size="sm"
+                >Nuxt.js</UBadge
+              >
             </div>
           </div>
 
           <USeparator />
 
           <!-- Acções -->
-          <div class="flex items-center gap-3 pt-1">
+          <div class="flex items-center gap-3 pt-1 justify-end">
+            <UModal>
+              <UButton color="error" variant="subtle">
+                Abandonar projeto
+              </UButton>
+              <template #content>
+                <AppUiCardConfirm />
+              </template>
+            </UModal>
             <UButton
-              color="primary"
+              color="neutral"
+              variant="outline"
               :disabled="status === 'concluido'"
               @click="marcarConcluido"
             >

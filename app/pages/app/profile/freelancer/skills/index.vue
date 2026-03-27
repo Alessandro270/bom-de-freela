@@ -45,7 +45,7 @@ const skills = reactive([
         <div class="w-full flex justify-end">
           <UButton label="Editar" color="neutral" variant="outline" />
         </div>
-        <template #header>
+        <template #title>
           <AppUiHeaderProfile>Editar habilidades</AppUiHeaderProfile>
         </template>
         <template #body>
@@ -58,12 +58,12 @@ const skills = reactive([
             >
               <AppUiButtonRating :rating="skill.value" />
             </UFormField>
-            <div class="flex space-x-3 justify-end">
-              <AppUiButtonSidePrimary type="submit">
-                Salvar
-              </AppUiButtonSidePrimary>
-            </div>
           </UForm>
+        </template>
+        <template #footer>
+          <AppUiButtonSidePrimary class="ml-auto" type="submit">
+            Salvar
+          </AppUiButtonSidePrimary>
         </template>
       </UModal>
     </AppLayoutProfileFreelancer>

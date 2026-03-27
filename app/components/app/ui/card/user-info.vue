@@ -13,7 +13,7 @@ const fullName = computed(() => `${props.firstName} ${props.lastName}`);
 </script>
 
 <template>
-  <UCard variant="subtle" class="border border-white/5">
+  <UCard variant="outline" class="border border-white/5">
     <template #header>
       <AppUiHeaderSubtle size="md"> Dados do {{ role }} </AppUiHeaderSubtle>
     </template>
@@ -37,7 +37,7 @@ const fullName = computed(() => `${props.firstName} ${props.lastName}`);
           title="Último nome"
           :description="lastName"
         />
-        <AppUiHeaderDescGroup reverse :title="nif" :description="nif" />
+        <AppUiHeaderDescGroup reverse title="NIF" :description="nif" />
         <AppUiHeaderDescGroup reverse title="Email" :description="email" />
         <AppUiHeaderDescGroup reverse title="Telefone" :description="phone" />
         <AppUiHeaderDescGroup

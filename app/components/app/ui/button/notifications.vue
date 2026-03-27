@@ -1,47 +1,52 @@
 <script setup lang="ts">
-import type { DropdownMenuItem } from "@nuxt/ui";
+type NotificationType =
+  | "contract_invite"
+  | "proposal"
+  | "payment"
+  | "review"
+  | "message";
 
 interface Notification {
   id: number;
+  type: NotificationType;
   title: string;
   body: string;
   time: string;
   read: boolean;
-  iconColor: string;
 }
 
 const notifications = ref<Notification[]>([
   {
     id: 1,
-    title: "Nova proposta recebida",
-    body: 'João Silva enviou uma proposta para "Website E-commerce".',
-    time: "há 5 min",
+    type: "contract_invite",
+    title: "Convite de contrato recebido",
+    body: 'Maria Santos convidou-te para "Redesign de App Móvel".',
+    time: "há 10 min",
     read: false,
-    iconColor: "text-blue-500",
   },
   {
     id: 2,
-    title: "Pagamento confirmado",
-    body: "O pagamento de €850,00 foi processado com sucesso.",
-    time: "há 1 h",
+    type: "proposal",
+    title: "Nova proposta recebida",
+    body: 'João Silva enviou uma proposta para "Website E-commerce".',
+    time: "há 35 min",
     read: false,
-    iconColor: "text-green-500",
   },
   {
     id: 3,
-    title: "Revisão solicitada",
-    body: 'O cliente pediu revisão em "Design UI – Sprint 2".',
-    time: "há 3 h",
+    type: "payment",
+    title: "Pagamento confirmado",
+    body: "O pagamento de 850.000 Kz foi processado com sucesso.",
+    time: "há 2 h",
     read: false,
-    iconColor: "text-amber-500",
   },
   {
     id: 4,
-    title: "Mensagem de Maria Santos",
+    type: "message",
+    title: "Mensagem de Carlos Ferreira",
     body: "Podemos agendar uma reunião para amanhã às 10h?",
     time: "ontem",
     read: true,
-    iconColor: "text-violet-500",
   },
 ]);
 
@@ -58,68 +63,38 @@ function markAllAsRead() {
   notifications.value.forEach((n) => (n.read = true));
 }
 
-function removeNotification(id: number) {
-  notifications.value = notifications.value.filter((n) => n.id !== id);
-}
-
 function clearAll() {
   notifications.value = [];
 }
 
-// Constrói os items do dropdown a partir das notificações
-const items = computed<DropdownMenuItem[][]>(() => {
-  if (notifications.value.length === 0) {
-    return [
-      [
-        {
-          label: "Sem notificações",
-          icon: "i-lucide-bell-off",
-          disabled: true,
-          type: "label" as const,
-        },
-      ],
-    ];
-  }
+const iconByType: Record<NotificationType, string> = {
+  contract_invite: "i-lucide-file-signature",
+  proposal: "i-lucide-send",
+  payment: "i-lucide-circle-dollar-sign",
+  review: "i-lucide-refresh-ccw",
+  message: "i-lucide-message-circle",
+};
 
-  const notifItems: DropdownMenuItem[] = notifications.value.map((n) => ({
-    label: n.title,
-    // Descrição debaixo do label via slot não é suportada em items,
-    // usamos o badge para mostrar o tempo e a classe para o estado lido
-    badge: n.time,
-    class: n.read ? "opacity-60" : "",
-    onSelect: () => markAsRead(n.id),
-  }));
+const colorByType: Record<NotificationType, string> = {
+  contract_invite: "text-violet-500",
+  proposal: "text-blue-500",
+  payment: "text-green-500",
+  review: "text-amber-500",
+  message: "text-pink-500",
+};
 
-  const actions: DropdownMenuItem[] = [];
-
-  if (unreadCount.value > 0) {
-    actions.push({
-      label: "Marcar todas como lidas",
-      icon: "i-lucide-check-check",
-      onSelect: markAllAsRead,
-    });
-  }
-
-  actions.push({
-    label: "Limpar todas",
-    icon: "i-lucide-trash-2",
-    color: "error" as const,
-    onSelect: clearAll,
-  });
-
-  actions.push({
-    label: "Ver todas",
-    icon: "i-lucide-lightbulb",
-    color: "info" as const,
-    to: "/app/notifications/",
-  });
-
-  return [notifItems, actions];
-});
+const bgByType: Record<NotificationType, string> = {
+  contract_invite: "bg-violet-100 dark:bg-violet-950/50",
+  proposal: "bg-blue-100 dark:bg-blue-950/50",
+  payment: "bg-green-100 dark:bg-green-950/50",
+  review: "bg-amber-100 dark:bg-amber-950/50",
+  message: "bg-pink-100 dark:bg-pink-950/50",
+};
 </script>
 
 <template>
-  <UDropdownMenu :items="items">
+  <UPopover :content="{ align: 'end', side: 'bottom' }" :ui="{ content: 'p-0 w-96' }">
+    <!-- Trigger Button -->
     <UButton
       icon="i-lucide-bell"
       color="neutral"
@@ -127,7 +102,6 @@ const items = computed<DropdownMenuItem[][]>(() => {
       aria-label="Notificações"
       class="relative"
     >
-      <!-- Badge de não lidas sobreposta ao botão -->
       <template #trailing>
         <span
           v-if="unreadCount > 0"
@@ -137,5 +111,135 @@ const items = computed<DropdownMenuItem[][]>(() => {
         </span>
       </template>
     </UButton>
-  </UDropdownMenu>
+
+    <!-- Popover Content -->
+    <template #content>
+      <!-- Header -->
+      <div
+        class="flex items-center justify-between px-4 py-3 border-b border-gray-100 dark:border-gray-800"
+      >
+        <div class="flex items-center gap-2">
+          <p class="text-sm font-semibold text-gray-900 dark:text-white">
+            Notificações
+          </p>
+          <UBadge
+            v-if="unreadCount > 0"
+            color="error"
+            variant="solid"
+            size="xs"
+          >
+            {{ unreadCount }}
+          </UBadge>
+        </div>
+        <div class="flex items-center gap-1">
+          <UButton
+            v-if="unreadCount > 0"
+            size="xs"
+            color="neutral"
+            variant="ghost"
+            icon="i-lucide-check-check"
+            label="Marcar todas"
+            @click="markAllAsRead"
+          />
+          <UButton
+            v-if="notifications.length > 0"
+            size="xs"
+            color="error"
+            variant="ghost"
+            icon="i-lucide-trash-2"
+            @click="clearAll"
+          />
+        </div>
+      </div>
+
+      <!-- Empty state -->
+      <div
+        v-if="notifications.length === 0"
+        class="flex flex-col items-center justify-center py-10 px-4 text-center"
+      >
+        <UIcon
+          name="i-lucide-bell-off"
+          class="h-8 w-8 text-gray-300 dark:text-gray-600 mb-2"
+        />
+        <p class="text-sm text-gray-400 dark:text-gray-500">
+          Sem notificações
+        </p>
+      </div>
+
+      <!-- Notifications List -->
+      <div v-else class="divide-y divide-gray-100 dark:divide-gray-800 max-h-96 overflow-y-auto">
+        <div
+          v-for="notif in notifications"
+          :key="notif.id"
+          class="px-4 py-3 transition-colors hover:bg-gray-50 dark:hover:bg-gray-900/50"
+          :class="!notif.read ? 'bg-primary-50/40 dark:bg-primary-950/20' : ''"
+        >
+          <div class="flex items-start gap-3">
+            <!-- Icon -->
+            <div
+              class="h-8 w-8 rounded-full flex items-center justify-center shrink-0 mt-0.5"
+              :class="bgByType[notif.type]"
+            >
+              <UIcon
+                :name="iconByType[notif.type]"
+                class="h-4 w-4"
+                :class="colorByType[notif.type]"
+              />
+            </div>
+
+            <!-- Content -->
+            <div class="flex-1 min-w-0">
+              <div class="flex items-start justify-between gap-1">
+                <p
+                  class="text-xs font-semibold text-gray-900 dark:text-white leading-snug"
+                >
+                  {{ notif.title }}
+                </p>
+                <span
+                  v-if="!notif.read"
+                  class="h-2 w-2 rounded-full bg-primary-500 shrink-0 mt-1"
+                />
+              </div>
+              <p
+                class="text-xs text-gray-500 dark:text-gray-400 mt-0.5 leading-snug line-clamp-2"
+              >
+                {{ notif.body }}
+              </p>
+              <div class="flex items-center justify-between mt-1.5">
+                <span class="text-[11px] text-gray-400 dark:text-gray-600">
+                  {{ notif.time }}
+                </span>
+                <UButton
+                  v-if="!notif.read"
+                  size="xs"
+                  color="neutral"
+                  variant="ghost"
+                  icon="i-lucide-check"
+                  label="Lida"
+                  class="h-5 text-[11px]"
+                  @click="markAsRead(notif.id)"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div
+        class="px-4 py-2.5 border-t border-gray-100 dark:border-gray-800"
+      >
+        <UButton
+          size="xs"
+          color="primary"
+          variant="ghost"
+          icon="i-lucide-arrow-right"
+          label="Ver todas as notificações"
+          trailing
+          to="/app/notifications"
+          class="w-full justify-center"
+        />
+      </div>
+    </template>
+  </UPopover>
 </template>

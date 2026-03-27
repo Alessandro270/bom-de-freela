@@ -34,7 +34,7 @@
         <AppUiButtonNotifications />
       </li>
       <li>
-        <AppUiButtonAcount />
+        <AppUiButtonAccount />
       </li>
     </ul>
   </header>

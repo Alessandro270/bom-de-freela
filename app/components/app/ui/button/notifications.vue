@@ -107,6 +107,13 @@ const items = computed<DropdownMenuItem[][]>(() => {
     onSelect: clearAll,
   });
 
+  actions.push({
+    label: "Ver todas",
+    icon: "i-lucide-lightbulb",
+    color: "info" as const,
+    to: "/app/notifications/",
+  });
+
   return [notifItems, actions];
 });
 </script>

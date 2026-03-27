@@ -16,12 +16,6 @@ const userInitials = computed(() =>
     .toUpperCase(),
 );
 
-const activeAccount = ref<"personal" | "freelancer" | "client">("personal");
-
-function switchAccount(type: typeof activeAccount.value) {
-  activeAccount.value = type;
-}
-
 function logout() {
   // ex: await useAuth().logout()
   navigateTo("/login");
@@ -54,9 +48,14 @@ const items = computed<DropdownMenuItem[][]>(() => [
   // Perfil e configurações
   [
     {
+      label: "A minha conta",
+      icon: "i-lucide-circle-user",
+      to: "/app/account/",
+    },
+    {
       label: "Definições",
       icon: "i-lucide-settings",
-      to: "/app/settings/",
+      to: "/app/account/settings/",
     },
   ],
 

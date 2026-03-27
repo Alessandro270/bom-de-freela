@@ -1,56 +1,72 @@
 <template>
-  <li
-    class="border flex flex-col border-slate-700 px-8 py-7 space-y-3 bg-slate-950 font-google rounded-md"
-  >
-    <div class="flex items-center justify-between">
-      <div class="space-x-8 flex">
-        <div
-          class="py-8 min-w-24 rounded-md flex items-center justify-center font-bold text-4xl capitalize text-slate-50 bg-purple-700"
-        >
-          <span class="inline-block leading-5"> AA </span>
-        </div>
-        <div class="flex space-y-0.5 flex-col">
-          <span class="text-2xl text-slate-200">Alessandro Almeida</span>
-          <span class="text-xl font-medium text-slate-400">
-            Desenvolvedor backend
-          </span>
-          <div class="flex h-6 items-center space-x-2">
-            <UiRating :value="4" />
+  <UCard class="hover:ring-1 hover:ring-primary-500/50 transition-all group">
+    <div class="flex flex-col gap-5">
+      <!-- Header: Avatar + Info + CTA -->
+      <div class="flex items-start justify-between gap-6">
+        <div class="flex items-center gap-5">
+          <div
+            class="h-16 w-16 rounded-xl bg-violet-600 flex items-center justify-center text-xl font-bold text-white select-none shrink-0"
+          >
+            AA
+          </div>
+          <div class="space-y-1">
+            <h3
+              class="text-lg font-bold text-gray-900 dark:text-white group-hover:text-primary-500 transition-colors"
+            >
+              Alessandro Almeida
+            </h3>
+            <p class="text-sm font-medium text-gray-500 dark:text-gray-400">
+              Desenvolvedor backend
+            </p>
+            <div class="flex items-center gap-1.5">
+              <UiRating :value="4" />
+              <span class="text-xs text-gray-400 dark:text-gray-500"
+                >(12 projetos)</span
+              >
+            </div>
           </div>
         </div>
-      </div>
-      <div class="self-start flex space-y-2 justify-start flex-col items-end">
-        <AppUiButtonPrimary to="/app/freelancers/1" class="w-max px-5">
-          ver perfil
-        </AppUiButtonPrimary>
-        <div class="flex flex-col items-end space-y-0.5">
-          <AppUiButtonDesc title="por projeto" value="500 mil Kz" />
-          <AppUiButtonDesc title="projetos" value="12" />
+
+        <div class="flex flex-col items-end gap-2 shrink-0">
+          <div class="text-right">
+            <p
+              class="text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wide"
+            >
+              Por projeto
+            </p>
+            <p class="text-sm font-bold text-primary-500">500 mil Kz</p>
+          </div>
+          <UButton
+            to="/app/freelancers/1"
+            size="xs"
+            color="primary"
+            variant="solid"
+            label="Ver perfil"
+            icon="i-lucide-arrow-up-right"
+            trailing
+          />
         </div>
       </div>
-    </div>
 
-    <div class="space-y-1">
-      <AppUiHeaderSide>Sobre mim</AppUiHeaderSide>
-      <p class="text-justify">
+      <!-- About -->
+      <p
+        class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed line-clamp-2 text-justify"
+      >
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum sapiente
         quia numquam hic. Consequatur vitae sit harum impedit esse, sapiente
-        aspernatur expedita. Obcaecati, voluptatem deleniti? Minima quis tenetur
-        maiores sint. <AppUiButtonMore />
+        aspernatur expedita. Obcaecati, voluptatem deleniti.
       </p>
-    </div>
-    <div class="flex space-x-4">
-      <strong><i> habilidades:</i></strong>
-      <div class="flex space-x-4 items-center">
-        <AppUiButtonTag>Python</AppUiButtonTag>
-        <AppUiButtonTag>Backend</AppUiButtonTag>
-        <AppUiButtonTag>Pwa</AppUiButtonTag>
+
+      <!-- Skills -->
+      <div class="flex items-center gap-2 flex-wrap">
         <span
-          class="flex items-center rounded-sm h-6 w-6 transition cursor-pointer justify-center hover:bg-purple-700"
+          class="text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wide shrink-0"
+          >Habilidades:</span
         >
-          <Icon name="material-symbols:add-2" class="leading-5 text-slate-50" />
-        </span>
+        <UBadge color="primary" variant="subtle" size="sm">Python</UBadge>
+        <UBadge color="primary" variant="subtle" size="sm">Backend</UBadge>
+        <UBadge color="primary" variant="subtle" size="sm">PWA</UBadge>
       </div>
     </div>
-  </li>
+  </UCard>
 </template>

@@ -25,11 +25,20 @@ const experiences = reactive([
 
 <template>
   <AppLayoutFreelancer>
-    <AppUiHeaderProfile class="flex justify-between">
-      <span>experiencias</span>
-      <span class="text-slate-500"> ({{ experiences.length }})</span>
-    </AppUiHeaderProfile>
-    <ul class="space-y-2 *:not-last:border-b *:not-last:border-slate-700">
+    <!-- Section Header -->
+    <div class="flex items-center gap-2 mb-4">
+      <h2
+        class="text-sm font-semibold text-gray-700 dark:text-gray-300 uppercase tracking-wide"
+      >
+        Experiência
+      </h2>
+      <UBadge color="neutral" variant="subtle" size="xs">{{
+        experiences.length
+      }}</UBadge>
+    </div>
+
+    <!-- Experience List -->
+    <ul class="divide-y divide-gray-100 dark:divide-gray-800">
       <AppUiCardExperience
         v-for="exp in experiences"
         :key="exp.company"

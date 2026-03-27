@@ -1,6 +1,6 @@
 <template>
   <div class="space-y-4 w-5xl mx-auto">
-    <!-- Hero card: avatar + nome + rating + ação -->
+    <!-- Hero card: avatar + nome + rating + meta -->
     <UCard>
       <div class="flex items-start justify-between gap-6">
         <!-- Avatar + nome + rating -->
@@ -17,11 +17,16 @@
             <p class="text-base font-medium text-gray-500 dark:text-gray-400">
               Cliente
             </p>
-            <UiRating :value="4" />
+            <div class="flex items-center gap-1.5">
+              <UiRating :value="4" />
+              <span class="text-xs text-gray-400 dark:text-gray-500"
+                >(18 avaliações)</span
+              >
+            </div>
           </div>
         </div>
 
-        <!-- Meta: membro desde + postar proposta -->
+        <!-- Meta: membro desde + ver perfil público -->
         <div class="flex flex-col items-end gap-3 shrink-0">
           <div class="text-right">
             <p
@@ -34,12 +39,13 @@
             </p>
           </div>
           <UButton
-            color="primary"
-            variant="solid"
-            size="sm"
-            icon="i-lucide-plus"
-            label="Postar Proposta"
-            to="/app/profile/client/proposals/new"
+            size="xs"
+            color="neutral"
+            variant="outline"
+            label="Ver perfil público"
+            icon="i-lucide-arrow-up-right"
+            trailing
+            to="/app/clients/1/"
           />
         </div>
       </div>
@@ -49,6 +55,7 @@
     <AppUiNavBar
       :items="[
         { to: '/app/profile/client/', label: 'Sobre mim' },
+        { to: '/app/profile/client/projects', label: 'Projetos' },
         { to: '/app/profile/client/proposals', label: 'Propostas' },
         { to: '/app/profile/client/reviews', label: 'Avaliações' },
       ]"

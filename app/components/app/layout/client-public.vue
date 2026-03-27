@@ -1,13 +1,11 @@
 <script lang="ts" setup>
-const tags = ref<string[]>(["Python", "Backend", "PWA"]);
 const route = useRoute();
 const id = computed(() => (route.params.id as string) ?? "1");
 
 const navItems = computed(() => [
-  { to: `/app/freelancers/${id.value}/`, label: "Sobre mim" },
-  { to: `/app/freelancers/${id.value}/skills`, label: "Habilidades" },
-  { to: `/app/freelancers/${id.value}/reviews`, label: "Avaliações" },
-  { to: `/app/freelancers/${id.value}/experience`, label: "Experiência" },
+  { to: `/app/clients/${id.value}/`, label: "Sobre mim" },
+  { to: `/app/clients/${id.value}/projects`, label: "Projetos" },
+  { to: `/app/clients/${id.value}/reviews`, label: "Avaliações" },
 ]);
 </script>
 
@@ -20,7 +18,7 @@ const navItems = computed(() => [
           <!-- Avatar + Info -->
           <div class="flex items-center gap-6">
             <div
-              class="h-20 w-20 rounded-xl bg-violet-600 flex items-center justify-center text-2xl font-bold text-white select-none shrink-0"
+              class="h-20 w-20 rounded-xl bg-blue-600 flex items-center justify-center text-2xl font-bold text-white select-none shrink-0"
             >
               AA
             </div>
@@ -29,12 +27,12 @@ const navItems = computed(() => [
                 Alessandro Almeida
               </h1>
               <p class="text-base font-medium text-gray-500 dark:text-gray-400">
-                Desenvolvedor backend
+                Cliente · Empresa Individual
               </p>
               <div class="flex items-center gap-1.5">
                 <UiRating :value="4" />
                 <span class="text-xs text-gray-400 dark:text-gray-500"
-                  >(24 avaliações)</span
+                  >(18 avaliações)</span
                 >
               </div>
             </div>
@@ -56,31 +54,25 @@ const navItems = computed(() => [
               color="success"
               variant="subtle"
               size="sm"
-              icon="i-lucide-check-circle"
+              icon="i-lucide-shield-check"
             >
-              Verificado
+              Pagamento Verificado
             </UBadge>
           </div>
         </div>
 
         <USeparator />
 
-        <!-- Skills -->
+        <!-- Sectors -->
         <div class="flex items-center gap-2 flex-wrap">
           <span
             class="text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wide shrink-0"
           >
-            Habilidades:
+            Setores:
           </span>
-          <UBadge
-            v-for="tag in tags"
-            :key="tag"
-            color="primary"
-            variant="subtle"
-            size="sm"
-          >
-            {{ tag }}
-          </UBadge>
+          <UBadge color="neutral" variant="subtle" size="sm">Tecnologia</UBadge>
+          <UBadge color="neutral" variant="subtle" size="sm">Startups</UBadge>
+          <UBadge color="neutral" variant="subtle" size="sm">E-commerce</UBadge>
         </div>
       </div>
     </UCard>
@@ -104,8 +96,8 @@ const navItems = computed(() => [
               size="md"
               color="primary"
               variant="solid"
-              icon="i-lucide-send"
-              label="Contratar"
+              icon="i-lucide-folder-open"
+              label="Ver Projetos Abertos"
             />
 
             <USeparator />
@@ -119,16 +111,18 @@ const navItems = computed(() => [
               <div class="space-y-1.5">
                 <div class="flex justify-between text-sm">
                   <span class="text-gray-500 dark:text-gray-400"
-                    >Em andamento</span
+                    >Projetos publicados</span
                   >
                   <span class="font-semibold text-gray-900 dark:text-white"
-                    >2</span
+                    >12</span
                   >
                 </div>
                 <div class="flex justify-between text-sm">
-                  <span class="text-gray-500 dark:text-gray-400">Concluídos</span>
+                  <span class="text-gray-500 dark:text-gray-400"
+                    >Em andamento</span
+                  >
                   <span class="font-semibold text-gray-900 dark:text-white"
-                    >10</span
+                    >3</span
                   >
                 </div>
               </div>
@@ -144,15 +138,15 @@ const navItems = computed(() => [
               </p>
               <div class="space-y-1.5">
                 <div class="flex justify-between text-sm">
-                  <span class="text-gray-500 dark:text-gray-400">Classificação</span>
+                  <span class="text-gray-500 dark:text-gray-400">Gasto total</span>
                   <span class="font-semibold text-gray-900 dark:text-white"
-                    >5.0</span
+                    >2.5M Kz</span
                   >
                 </div>
                 <div class="flex justify-between text-sm">
-                  <span class="text-gray-500 dark:text-gray-400">Desde</span>
+                  <span class="text-gray-500 dark:text-gray-400">Classificação</span>
                   <span class="font-semibold text-gray-900 dark:text-white"
-                    >2023</span
+                    >4.8</span
                   >
                 </div>
               </div>

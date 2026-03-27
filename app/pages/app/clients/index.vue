@@ -5,13 +5,13 @@ const search = ref("");
 const selectedCategory = ref("Desenvolvimento");
 
 const categories = [
-  { label: "Desenvolvimento", count: 124 },
-  { label: "Design & Criatividade", count: 86 },
-  { label: "Marketing Digital", count: 52 },
-  { label: "Redação & Tradução", count: 31 },
-  { label: "Suporte Administrativo", count: 18 },
-  { label: "Consultoria", count: 12 },
-  { label: "Multimédia", count: 9 },
+  { label: "Desenvolvimento", count: 42 },
+  { label: "Design & Criatividade", count: 28 },
+  { label: "Marketing Digital", count: 15 },
+  { label: "Redação & Tradução", count: 9 },
+  { label: "Suporte Administrativo", count: 6 },
+  { label: "Consultoria", count: 4 },
+  { label: "Multimédia", count: 3 },
 ];
 </script>
 
@@ -67,53 +67,56 @@ const categories = [
 
           <USeparator />
 
-          <!-- Availability -->
+          <!-- Project History -->
           <div>
             <h3
               class="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-3"
             >
-              Disponibilidade
+              Historial de Projetos
             </h3>
             <div class="space-y-2 text-sm">
               <label
                 class="flex items-center gap-2 text-gray-600 dark:text-gray-400 cursor-pointer"
               >
                 <input type="checkbox" class="accent-primary-500" />
-                Tempo Inteiro
+                10+ projetos publicados
               </label>
               <label
                 class="flex items-center gap-2 text-gray-600 dark:text-gray-400 cursor-pointer"
               >
                 <input type="checkbox" class="accent-primary-500" />
-                Meio Tempo
+                5–10 projetos
               </label>
               <label
                 class="flex items-center gap-2 text-gray-600 dark:text-gray-400 cursor-pointer"
               >
                 <input type="checkbox" class="accent-primary-500" />
-                Fim de Semana
+                Novo cliente
               </label>
             </div>
           </div>
 
           <USeparator />
 
-          <!-- Rating -->
+          <!-- Trust Signals -->
           <div>
             <h3
               class="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-3"
             >
-              Avaliação Mínima
+              Verificações
             </h3>
             <div class="space-y-2 text-sm">
               <label
-                v-for="stars in [5, 4, 3]"
-                :key="stars"
                 class="flex items-center gap-2 text-gray-600 dark:text-gray-400 cursor-pointer"
               >
-                <input type="radio" name="rating" class="accent-primary-500" />
-                <UiRating :value="stars" />
-                <span class="text-xs">e acima</span>
+                <input type="checkbox" class="accent-primary-500" />
+                Pagamento verificado
+              </label>
+              <label
+                class="flex items-center gap-2 text-gray-600 dark:text-gray-400 cursor-pointer"
+              >
+                <input type="checkbox" class="accent-primary-500" />
+                Histórico de sucesso
               </label>
             </div>
           </div>
@@ -127,7 +130,7 @@ const categories = [
       <UInput
         v-model="search"
         icon="i-lucide-search"
-        placeholder="Pesquisar freelancers por nome, habilidade ou cargo..."
+        placeholder="Pesquisar clientes por nome, empresa ou setor..."
         size="lg"
         class="w-full"
       />
@@ -136,17 +139,17 @@ const categories = [
       <div class="flex items-center justify-between">
         <div>
           <h1 class="text-lg font-bold text-gray-900 dark:text-white">
-            Freelancers em
+            Clientes em
             <span class="text-primary-500">{{ selectedCategory }}</span>
           </h1>
           <p class="text-sm text-gray-500 dark:text-gray-400 mt-0.5">
-            124 profissionais encontrados
+            42 clientes encontrados
           </p>
         </div>
         <div class="flex items-center gap-2">
           <span class="text-sm text-gray-500 dark:text-gray-400">Ordem:</span>
           <USelect
-            :options="['Relevância', 'Menor preço', 'Maior avaliação']"
+            :options="['Atividade', 'Total investido', 'Avaliação']"
             size="sm"
             class="w-40"
           />
@@ -155,7 +158,7 @@ const categories = [
 
       <!-- Cards List -->
       <div class="space-y-4">
-        <AppUiCardFreelancer v-for="i in 5" :key="i" />
+        <AppUiCardClient v-for="i in 5" :key="i" />
       </div>
     </main>
   </div>

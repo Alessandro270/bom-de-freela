@@ -65,7 +65,7 @@ definePageMeta({ layout: "app" });
               variant="ghost"
               icon="i-lucide-pencil"
               label="Editar"
-              to="/settings/account"
+              to="/app/account/settings"
             />
           </div>
 
@@ -89,7 +89,7 @@ definePageMeta({ layout: "app" });
               variant="ghost"
               icon="i-lucide-pencil"
               label="Editar"
-              to="/settings/account"
+              to="/app/account/settings"
             />
           </div>
 
@@ -116,7 +116,7 @@ definePageMeta({ layout: "app" });
               variant="ghost"
               icon="i-lucide-pencil"
               label="Editar"
-              to="/settings/account"
+              to="/app/account/settings"
             />
           </div>
         </div>

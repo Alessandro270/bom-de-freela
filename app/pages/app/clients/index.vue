@@ -16,7 +16,7 @@ const categories = [
 </script>
 
 <template>
-  <div class="flex gap-8 items-start">
+  <AppLayoutLargeWrapper>
     <!-- Sidebar Filters -->
     <aside class="w-72 shrink-0">
       <UCard class="sticky top-6">
@@ -125,7 +125,7 @@ const categories = [
     </aside>
 
     <!-- Main Content -->
-    <main class="flex-1 min-w-0 space-y-6">
+    <main class="flex-1 min-w-0 max-w-5xl space-y-6">
       <!-- Search Bar -->
       <UInput
         v-model="search"
@@ -161,5 +161,5 @@ const categories = [
         <AppUiCardClient v-for="i in 5" :key="i" />
       </div>
     </main>
-  </div>
+  </AppLayoutLargeWrapper>
 </template>

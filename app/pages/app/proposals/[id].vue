@@ -7,14 +7,16 @@ const proposalValue = ref("");
 </script>
 
 <template>
-  <div class="flex gap-8 items-start max-w-5xl mx-auto">
+  <AppLayoutLargeWrapper>
     <!-- Main Content (Job Posting) -->
     <div class="flex-1 min-w-0 space-y-6">
       <!-- Job Title Header -->
       <UCard>
         <div class="space-y-3">
           <div class="flex items-start justify-between gap-4">
-            <h1 class="text-xl font-bold text-gray-900 dark:text-white leading-snug">
+            <h1
+              class="text-xl font-bold text-gray-900 dark:text-white leading-snug"
+            >
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo at,
               ratione totam fugiat omnis nobis iste placeat.
             </h1>
@@ -28,13 +30,22 @@ const proposalValue = ref("");
             <UiRating :value="5" />
             <span class="text-xs text-gray-400 dark:text-gray-500">
               Avaliações:
-              <span class="font-medium text-gray-600 dark:text-gray-300">(5)</span>
+              <span class="font-medium text-gray-600 dark:text-gray-300"
+                >(5)</span
+              >
             </span>
             <span class="text-xs text-gray-400 dark:text-gray-500">
               Postado em:
-              <span class="font-medium text-gray-600 dark:text-gray-300">23/03/2026</span>
+              <span class="font-medium text-gray-600 dark:text-gray-300"
+                >23/03/2026</span
+              >
             </span>
-            <UBadge color="success" variant="subtle" size="xs" icon="i-lucide-circle-dot">
+            <UBadge
+              color="success"
+              variant="subtle"
+              size="xs"
+              icon="i-lucide-circle-dot"
+            >
               Aberto
             </UBadge>
           </div>
@@ -46,23 +57,28 @@ const proposalValue = ref("");
         <template #header>
           <div class="flex items-center gap-2">
             <UIcon name="i-lucide-file-text" class="h-4 w-4 text-gray-500" />
-            <span class="text-sm font-semibold text-gray-700 dark:text-gray-300">
+            <span
+              class="text-sm font-semibold text-gray-700 dark:text-gray-300"
+            >
               Descrição do Projeto
             </span>
           </div>
         </template>
 
         <div class="space-y-5">
-          <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed text-justify">
+          <p
+            class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed text-justify"
+          >
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo at,
             ratione totam fugiat omnis nobis iste placeat, quidem soluta quia,
-            voluptate nam ipsam quisquam porro voluptas possimus dolore quasi ea!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo at,
-            ratione totam fugiat omnis nobis iste placeat, quidem soluta quia,
-            voluptate nam ipsam quisquam porro voluptas possimus dolore quasi ea!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo at,
-            ratione totam fugiat omnis nobis iste placeat, quidem soluta quia,
-            voluptate nam ipsam quisquam porro voluptas possimus dolore quasi ea!
+            voluptate nam ipsam quisquam porro voluptas possimus dolore quasi
+            ea! Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
+            at, ratione totam fugiat omnis nobis iste placeat, quidem soluta
+            quia, voluptate nam ipsam quisquam porro voluptas possimus dolore
+            quasi ea! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Illo at, ratione totam fugiat omnis nobis iste placeat, quidem
+            soluta quia, voluptate nam ipsam quisquam porro voluptas possimus
+            dolore quasi ea!
           </p>
 
           <USeparator />
@@ -70,7 +86,9 @@ const proposalValue = ref("");
           <!-- Details Grid -->
           <div class="grid grid-cols-3 gap-4">
             <div>
-              <p class="text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wide">
+              <p
+                class="text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wide"
+              >
                 Categoria
               </p>
               <p class="text-sm font-medium text-gray-900 dark:text-white mt-1">
@@ -78,7 +96,9 @@ const proposalValue = ref("");
               </p>
             </div>
             <div>
-              <p class="text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wide">
+              <p
+                class="text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wide"
+              >
                 Subcategoria
               </p>
               <p class="text-sm font-medium text-gray-900 dark:text-white mt-1">
@@ -86,7 +106,9 @@ const proposalValue = ref("");
               </p>
             </div>
             <div>
-              <p class="text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wide">
+              <p
+                class="text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wide"
+              >
                 Prazo de entrega
               </p>
               <p class="text-sm font-medium text-gray-900 dark:text-white mt-1">
@@ -97,7 +119,9 @@ const proposalValue = ref("");
 
           <!-- Skills -->
           <div>
-            <p class="text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-2">
+            <p
+              class="text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-2"
+            >
               Habilidades necessárias
             </p>
             <div class="flex gap-2 flex-wrap">
@@ -120,7 +144,9 @@ const proposalValue = ref("");
         <template #header>
           <div class="flex items-center gap-2">
             <UIcon name="i-lucide-send" class="h-4 w-4 text-gray-500" />
-            <span class="text-sm font-semibold text-gray-700 dark:text-gray-300">
+            <span
+              class="text-sm font-semibold text-gray-700 dark:text-gray-300"
+            >
               Enviar Proposta
             </span>
           </div>
@@ -187,17 +213,27 @@ const proposalValue = ref("");
           <USeparator />
 
           <div class="space-y-2">
-            <p class="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide">
+            <p
+              class="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide"
+            >
               Atividade
             </p>
             <div class="space-y-1.5">
               <div class="flex justify-between text-sm">
-                <span class="text-gray-500 dark:text-gray-400">Propostas enviadas</span>
-                <span class="font-semibold text-gray-900 dark:text-white">2</span>
+                <span class="text-gray-500 dark:text-gray-400"
+                  >Propostas enviadas</span
+                >
+                <span class="font-semibold text-gray-900 dark:text-white"
+                  >2</span
+                >
               </div>
               <div class="flex justify-between text-sm">
-                <span class="text-gray-500 dark:text-gray-400">Última proposta</span>
-                <span class="font-semibold text-gray-900 dark:text-white">há 2h</span>
+                <span class="text-gray-500 dark:text-gray-400"
+                  >Última proposta</span
+                >
+                <span class="font-semibold text-gray-900 dark:text-white"
+                  >há 2h</span
+                >
               </div>
             </div>
           </div>
@@ -205,17 +241,27 @@ const proposalValue = ref("");
           <USeparator />
 
           <div class="space-y-2">
-            <p class="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide">
+            <p
+              class="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide"
+            >
               Informação do Cliente
             </p>
             <div class="space-y-1.5">
               <div class="flex justify-between text-sm">
-                <span class="text-gray-500 dark:text-gray-400">Propostas publicadas</span>
-                <span class="font-semibold text-gray-900 dark:text-white">5</span>
+                <span class="text-gray-500 dark:text-gray-400"
+                  >Propostas publicadas</span
+                >
+                <span class="font-semibold text-gray-900 dark:text-white"
+                  >5</span
+                >
               </div>
               <div class="flex justify-between text-sm">
-                <span class="text-gray-500 dark:text-gray-400">Membro desde</span>
-                <span class="font-semibold text-gray-900 dark:text-white">2023</span>
+                <span class="text-gray-500 dark:text-gray-400"
+                  >Membro desde</span
+                >
+                <span class="font-semibold text-gray-900 dark:text-white"
+                  >2023</span
+                >
               </div>
             </div>
           </div>
@@ -232,5 +278,5 @@ const proposalValue = ref("");
         </div>
       </UCard>
     </aside>
-  </div>
+  </AppLayoutLargeWrapper>
 </template>

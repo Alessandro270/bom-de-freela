@@ -16,7 +16,7 @@ const categories = [
 </script>
 
 <template>
-  <div class="flex gap-8 items-start">
+  <AppLayoutLargeWrapper>
     <!-- Sidebar Filters -->
     <aside class="w-72 shrink-0">
       <UCard class="sticky top-6">
@@ -158,5 +158,5 @@ const categories = [
         <AppUiCardFreelancer v-for="i in 5" :key="i" />
       </div>
     </main>
-  </div>
+  </AppLayoutLargeWrapper>
 </template>

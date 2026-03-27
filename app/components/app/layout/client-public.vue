@@ -10,7 +10,11 @@ const navItems = computed(() => [
 </script>
 
 <template>
-  <div class="space-y-6 max-w-5xl mx-auto">
+  <div class="space-y-5 max-w-5xl mx-auto">
+    <!-- Breadcrumb Navigation -->
+    <AppUiNavBreadcrumb />
+
+    <div class="space-y-6">
     <!-- Hero Card -->
     <UCard>
       <div class="flex flex-col gap-4">
@@ -154,6 +158,7 @@ const navItems = computed(() => [
           </div>
         </UCard>
       </aside>
+    </div>
     </div>
   </div>
 </template>

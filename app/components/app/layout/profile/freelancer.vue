@@ -3,7 +3,7 @@ const tags = ref<string[]>(["Python", "Backend", "Pwa"]);
 </script>
 
 <template>
-  <div class="space-y-4 w-5xl mx-auto">
+  <div class="space-y-4 w-full">
     <!-- Hero card: avatar + nome + rating + habilidades -->
     <UCard>
       <div class="flex flex-col gap-4">

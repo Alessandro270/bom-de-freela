@@ -1,5 +1,5 @@
 <template>
-  <div class="space-y-4 w-5xl mx-auto">
+  <div class="space-y-4 w-full">
     <!-- Hero card: avatar + nome + rating + meta -->
     <UCard>
       <div class="flex items-start justify-between gap-6">

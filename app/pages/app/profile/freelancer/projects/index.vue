@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 definePageMeta({ layout: "app" });
+
 const projects = [
   {
     id: 1,
@@ -39,11 +40,20 @@ const projects = [
 <template>
   <AppLayoutProfile>
     <AppLayoutProfileFreelancer>
-      <AppUiHeaderProfile class="flex justify-between">
-        <span>Projetos</span>
-        <span class="text-slate-400"> (4)</span>
-      </AppUiHeaderProfile>
-      <div class="space-y-2 *:not-last:border-b *:not-last:border-slate-700">
+      <!-- Cabeçalho da secção -->
+      <div class="flex items-center justify-between mb-4">
+        <div class="flex items-center gap-2">
+          <h2 class="text-sm font-semibold text-gray-700 dark:text-gray-300 uppercase tracking-wide">
+            Projetos
+          </h2>
+          <UBadge color="neutral" variant="subtle" size="xs">
+            {{ projects.length }}
+          </UBadge>
+        </div>
+      </div>
+
+      <!-- Lista de projetos -->
+      <div class="divide-y divide-gray-100 dark:divide-gray-800">
         <AppUiCardProject
           v-for="project in projects"
           :key="project.id"

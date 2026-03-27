@@ -76,24 +76,27 @@ const iconByType: Record<NotificationType, string> = {
 };
 
 const colorByType: Record<NotificationType, string> = {
-  contract_invite: "text-violet-500",
-  proposal: "text-blue-500",
+  contract_invite: "text-green-500",
+  proposal: "text-green-500",
   payment: "text-green-500",
-  review: "text-amber-500",
-  message: "text-pink-500",
+  review: "text-green-500",
+  message: "text-green-500",
 };
 
 const bgByType: Record<NotificationType, string> = {
-  contract_invite: "bg-violet-100 dark:bg-violet-950/50",
-  proposal: "bg-blue-100 dark:bg-blue-950/50",
+  contract_invite: "bg-green-100 dark:bg-green-950/50",
+  proposal: "bg-green-100 dark:bg-green-950/50",
   payment: "bg-green-100 dark:bg-green-950/50",
-  review: "bg-amber-100 dark:bg-amber-950/50",
-  message: "bg-pink-100 dark:bg-pink-950/50",
+  review: "bg-green-100 dark:bg-green-950/50",
+  message: "bg-green-100 dark:bg-green-950/50",
 };
 </script>
 
 <template>
-  <UPopover :content="{ align: 'end', side: 'bottom' }" :ui="{ content: 'p-0 w-96' }">
+  <UPopover
+    :content="{ align: 'end', side: 'bottom' }"
+    :ui="{ content: 'p-0 w-96' }"
+  >
     <!-- Trigger Button -->
     <UButton
       icon="i-lucide-bell"
@@ -161,13 +164,14 @@ const bgByType: Record<NotificationType, string> = {
           name="i-lucide-bell-off"
           class="h-8 w-8 text-gray-300 dark:text-gray-600 mb-2"
         />
-        <p class="text-sm text-gray-400 dark:text-gray-500">
-          Sem notificações
-        </p>
+        <p class="text-sm text-gray-400 dark:text-gray-500">Sem notificações</p>
       </div>
 
       <!-- Notifications List -->
-      <div v-else class="divide-y divide-gray-100 dark:divide-gray-800 max-h-96 overflow-y-auto">
+      <div
+        v-else
+        class="divide-y divide-gray-100 dark:divide-gray-800 max-h-96 overflow-y-auto"
+      >
         <div
           v-for="notif in notifications"
           :key="notif.id"
@@ -226,9 +230,7 @@ const bgByType: Record<NotificationType, string> = {
       </div>
 
       <!-- Footer -->
-      <div
-        class="px-4 py-2.5 border-t border-gray-100 dark:border-gray-800"
-      >
+      <div class="px-4 py-2.5 border-t border-gray-100 dark:border-gray-800">
         <UButton
           size="xs"
           color="primary"

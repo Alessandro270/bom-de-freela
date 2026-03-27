@@ -140,8 +140,8 @@ const bgByType: Record<NotificationType, string> = {
   contract_invite: "bg-green-100 dark:bg-green-950/50",
   proposal: "bg-green-100 dark:bg-green-950/50",
   payment: "bg-green-100 dark:bg-green-950/50",
-  review: "bg-amber-100 dark:bg-amber-950/50",
-  message: "bg-pink-100 dark:bg-pink-950/50",
+  review: "bg-green-100 dark:bg-green-950/50",
+  message: "bg-green-100 dark:bg-green-950/50",
 };
 
 const labelByType: Record<NotificationType, string> = {

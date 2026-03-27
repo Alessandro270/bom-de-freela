@@ -7,81 +7,103 @@ defineProps<{
   value: string;
   status: "pendente" | "aceite" | "rejeitado";
 }>();
+
+const statusColor = (status: string) => {
+  if (status === "aceite") return "success";
+  if (status === "rejeitado") return "error";
+  return "neutral";
+};
+
+const statusLabel = (status: string) => {
+  if (status === "aceite") return "Aceite";
+  if (status === "rejeitado") return "Rejeitado";
+  return "Pendente";
+};
 </script>
 
 <template>
   <div class="py-4 flex items-start justify-between gap-6">
-    <div class="space-y-3 flex-1 min-w-0">
-      <h3 class="text-slate-100 font-bold text-sm uppercase leading-snug">
+    <!-- Info -->
+    <div class="space-y-2 flex-1 min-w-0">
+      <p class="text-sm font-semibold text-gray-900 dark:text-white leading-snug">
         {{ jobTitle }}
-      </h3>
-      <div class="flex gap-4 items-center">
-        <AppUiButtonSmallAvatar :name="clientName" class="" />
-        <div>
-          <span class="text-slate-200 text-sm font-medium">
-            {{ clientName }}
-          </span>
-          <div class="space-x-4">
-            <span class="text-slate-400 text-xs italic">
-              enviado em:
-              <span class="text-slate-200 not-italic font-medium">
-                {{ sentAt }}
-              </span>
-            </span>
-            <span class="text-slate-400 text-xs italic">
-              valor:
-              <span class="text-slate-200 not-italic font-medium">
-                {{ value }}
-              </span>
-            </span>
-          </div>
-        </div>
+      </p>
+      <div class="flex items-center gap-3">
+        <UAvatar :alt="clientName" size="xs" class="bg-violet-600 shrink-0" />
+        <span class="text-sm font-medium text-gray-700 dark:text-gray-300">
+          {{ clientName }}
+        </span>
+      </div>
+      <div class="flex items-center gap-4">
+        <span class="text-xs text-gray-400 dark:text-gray-500">
+          Enviado em:
+          <span class="text-gray-600 dark:text-gray-300 font-medium">{{ sentAt }}</span>
+        </span>
+        <span class="text-xs text-gray-400 dark:text-gray-500">
+          Valor:
+          <span class="text-gray-600 dark:text-gray-300 font-medium">{{ value }}</span>
+        </span>
       </div>
     </div>
 
-    <div class="text-right space-y-2 flex flex-col justify-between h-18">
-      <p class="text-slate-400 text-xs italic">
-        estado:
-        <span
-          class="not-italic font-medium capitalize"
-          :class="{
-            'text-slate-300': status === 'pendente',
-            'text-purple-400': status === 'aceite',
-            'text-red-400': status === 'rejeitado',
-          }"
-        >
-          {{ status }}
-        </span>
-      </p>
-      <div class="flex items-center justify-end gap-2">
-        <UModal>
-          <UButton label="Editar proposta" color="neutral" variant="subtle" />
-          <template #title>
-            <AppUiHeaderProfile>Editar proposta</AppUiHeaderProfile>
-          </template>
-          <template #body>
-            <UForm class="space-y-4">
-              <UFormField label="Descrição" name="description">
-                <UTextarea class="w-full" placeholder="Descrição da proposta" />
-              </UFormField>
+    <!-- Estado + editar -->
+    <div class="flex flex-col items-end gap-3 shrink-0">
+      <UBadge
+        :color="statusColor(status)"
+        variant="subtle"
+        size="sm"
+      >
+        {{ statusLabel(status) }}
+      </UBadge>
 
-              <UFormField label="Preco inicial" name="startPrice">
-                <UInputNumber
-                  class="w-full"
-                  placeholder="575,000.00 kz"
-                  orientation="vertical"
-                />
-              </UFormField>
-            </UForm>
-          </template>
-          <template #footer>
-            <div class="flex space-x-3 justify-end w-full">
-              <AppUiButtonSideSecondary>Eliminar</AppUiButtonSideSecondary>
-              <AppUiButtonSidePrimary>Salvar</AppUiButtonSidePrimary>
-            </div>
-          </template>
-        </UModal>
-      </div>
+      <UModal>
+        <UButton
+          size="xs"
+          color="neutral"
+          variant="ghost"
+          icon="i-lucide-pencil"
+          label="Editar"
+        />
+        <template #header>
+          <div class="flex items-center gap-2">
+            <UIcon name="i-lucide-file-text" class="h-4 w-4 text-gray-500" />
+            <span class="text-sm font-semibold text-gray-700 dark:text-gray-300">
+              Editar proposta
+            </span>
+          </div>
+        </template>
+        <template #body>
+          <UForm class="space-y-4">
+            <UFormField label="Descrição" name="description">
+              <UTextarea class="w-full" placeholder="Descrição da proposta" />
+            </UFormField>
+            <UFormField label="Preço inicial" name="startPrice">
+              <UInputNumber
+                class="w-full"
+                placeholder="575,000.00 kz"
+                orientation="vertical"
+              />
+            </UFormField>
+          </UForm>
+        </template>
+        <template #footer>
+          <div class="flex items-center justify-between w-full">
+            <UButton
+              color="error"
+              variant="ghost"
+              icon="i-lucide-trash-2"
+              label="Eliminar"
+            />
+            <UButton
+              type="submit"
+              color="primary"
+              variant="solid"
+              icon="i-lucide-save"
+              label="Salvar"
+            />
+          </div>
+        </template>
+      </UModal>
     </div>
   </div>
 </template>

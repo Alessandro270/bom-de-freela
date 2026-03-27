@@ -3,11 +3,10 @@ defineProps<{ value: number }>();
 </script>
 
 <template>
-  <li class="text-slate-50 flex items-center justify-between py-4">
-    <AppUiButtonTag>
+  <li class="flex items-center justify-between py-3">
+    <UBadge color="primary" variant="subtle" size="sm">
       <slot />
-    </AppUiButtonTag>
-
+    </UBadge>
     <UiRating :value="value" />
   </li>
 </template>

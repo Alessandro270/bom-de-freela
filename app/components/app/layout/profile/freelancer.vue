@@ -91,12 +91,16 @@ const tags = ref<string[]>(["Python", "Backend", "Pwa"]);
                 <UIcon name="i-lucide-tag" class="h-4 w-4 text-gray-500" />
                 <span
                   class="text-sm font-semibold text-gray-700 dark:text-gray-300"
-                  >Editar habilidades principais</span
                 >
+                  Editar informações
+                </span>
               </div>
             </template>
             <template #body>
               <UForm class="space-y-4">
+                <UFormField label="Cargo">
+                  <UInput class="w-full" />
+                </UFormField>
                 <UFormField label="Habilidades">
                   <UInputTags v-model="tags" class="w-full" />
                 </UFormField>

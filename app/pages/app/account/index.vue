@@ -20,9 +20,11 @@ definePageMeta({ layout: "app" });
         <template #header>
           <div class="flex items-center gap-2">
             <UIcon name="i-lucide-circle-user" class="h-4 w-4 text-gray-500" />
-            <span class="text-sm font-semibold text-gray-700 dark:text-gray-300"
-              >Informações pessoais</span
+            <span
+              class="text-sm font-semibold text-gray-700 dark:text-gray-300"
             >
+              Informações pessoais
+            </span>
           </div>
         </template>
 

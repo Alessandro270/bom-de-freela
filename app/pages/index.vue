@@ -1,113 +1,110 @@
-<template>
-  <div>
-    <div class="h-[50vh] flex flex-col items-center justify-center">
-      <h1 class="text-6xl font-extralight mb-6">
-        <span class="block">Conectamos freelancers </span>
-        <span
-          class="inline-block bg-linear-90 from-purple-900 to-orange-600 bg-clip-text text-transparent"
-        >
-          aos melhores projetos</span
-        >
-      </h1>
-      <p class="font-normal text-slate-200 mb-6">
-        A plataforma que une talento e oportunidade em Angola. Publique projetos
-        ou encontre trabalho com seguranca e transparencia
-      </p>
-
-      <div class="flex items-center space-x-6">
-        <UiButtonCta to="/">Contrate freelancers</UiButtonCta>
-        <UiButtonCta type="rev" to="/">Encontre propostas</UiButtonCta>
-      </div>
-    </div>
-    <div class="min-h-[50vh] flex flex-col items-center">
-      <div class="text-center space-y-3 mb-10">
-        <h1 class="text-3xl font-light">Procure por categorias</h1>
-        <p>Encontre o profissional perfeito para o seu projeto</p>
-      </div>
-      <ul class="grid grid-cols-3 gap-6 w-2/3">
-        <UiCardSmall
-          name="hugeicons:laptop-programming"
-          title="TI e informática"
-          :clients="2456"
-        />
-        <UiCardSmall
-          name="iconoir:design-pencil"
-          title="Design e multimédia"
-          :clients="2430"
-        />
-        <UiCardSmall
-          name="material-symbols:language-chinese-dayi-rounded"
-          title="Tradução e conteúdos"
-          :clients="2545"
-        />
-        <UiCardSmall
-          name="icon-park-outline:weixin-market"
-          title="Marketing e vendas"
-          :clients="3212"
-        />
-        <UiCardSmall
-          name="solar:user-speak-bold"
-          title="Suporte administrativo"
-          :clients="7642"
-        />
-        <UiCardSmall
-          name="temaki:tools"
-          title="Engenharia e manufatura"
-          :clients="7351"
-        />
-      </ul>
-    </div>
-    <div class="min-h-[50vh] flex flex-col items-center">
-      <div class="text-center space-y-3 mb-10">
-        <h1 class="text-3xl font-light">Como o Bom De Freela funciona</h1>
-        <p>Simples, estruturado e eficiente</p>
-      </div>
-      <ul class="grid grid-cols-3 gap-4 w-2/3 font-medium">
-        <UiCardStep title="Publique o seu projeto" :step="1">
-          Descreva o que precisa, incluindo prazo e orçamento, para receber
-          propostas de freelancers.
-        </UiCardStep>
-
-        <UiCardStep title="Candidate-se a vagas" :step="2">
-          Freelancers enviam propostas para projetos conforme suas habilidades.
-        </UiCardStep>
-
-        <UiCardStep title="Dê um feedback" :step="3">
-          Avalie a experiência para ajudar outros usuários e melhorar a
-          plataforma.
-        </UiCardStep>
-      </ul>
-    </div>
-    <div class="min-h-[50vh] flex flex-col items-center">
-      <div class="text-center space-y-3 mb-10">
-        <h1 class="text-3xl font-light">O que os nossos clientes dizem</h1>
-        <p>Se junte a varios clientes satisfeitos</p>
-      </div>
-      <ul class="grid gap-6 grid-cols-3 w-2/3">
-        <UiCardTestimonial
-          name="Alessandro Almeida"
-          title="Deseonvolvedor backend"
-          :rating="5"
-        >
-          “Consegui vários trabalhos rapidamente. O sistema de propostas é
-          simples e ajuda bastante a conseguir novos clientes.”
-        </UiCardTestimonial>
-        <UiCardTestimonial name="Miguel Carlos" title="cliente" :rating="3">
-          “A plataforma facilitou muito a contratação. Encontrei um profissional
-          qualificado em pouco tempo e o projeto foi entregue com excelente
-          qualidade.”
-        </UiCardTestimonial>
-        <UiCardTestimonial name="Dário Freitas" title="cliente" :rating="4">
-          “O processo foi seguro e transparente. A comunicação com o freelancer
-          foi clara e o resultado final superou as expectativas.”
-        </UiCardTestimonial>
-      </ul>
-    </div>
-  </div>
-</template>
-
 <script setup lang="ts">
+import type { ButtonProps } from "@nuxt/ui";
+
 useHead({
   title: "Bom de Freela | A plataforma de freelancing de Angola",
 });
+
+const links = ref<ButtonProps[]>([
+  {
+    label: "Encontre trabalho",
+    color: "primary",
+  },
+  {
+    label: "Cadastre-se já",
+    color: "neutral",
+    variant: "subtle",
+    trailingIcon: "i-lucide-arrow-right",
+  },
+]);
+
+const cards = computed(() => [
+  {
+    title: "Desenvolvimento",
+    description:
+      "Projetos relacionados ao desenvolvimento de software, aplicações web, mobile e sistemas personalizados.",
+    icon: "i-lucide-code",
+    to: "/categorias/desenvolvimento",
+  },
+  {
+    title: "Design & Criatividade",
+    description:
+      "Serviços de design gráfico, UI/UX, branding, ilustração e criação visual para produtos digitais.",
+    icon: "i-lucide-palette",
+    to: "/categorias/design-criatividade",
+  },
+  {
+    title: "Marketing Digital",
+    description:
+      "Campanhas de marketing, gestão de redes sociais, SEO, publicidade online e estratégias digitais.",
+    icon: "i-lucide-megaphone",
+    to: "/categorias/marketing-digital",
+  },
+  {
+    title: "Redação & Tradução",
+    description:
+      "Produção de conteúdo, revisão textual, copywriting e serviços profissionais de tradução.",
+    icon: "i-lucide-file-text",
+    to: "/categorias/redacao-traducao",
+  },
+  {
+    title: "Suporte Administrativo",
+    description:
+      "Assistência virtual, entrada de dados, organização de documentos e tarefas administrativas.",
+    icon: "i-lucide-briefcase",
+    to: "/categorias/suporte-administrativo",
+  },
+  {
+    title: "Consultoria",
+    description:
+      "Serviços especializados de consultoria em negócios, tecnologia, finanças e gestão de projetos.",
+    icon: "i-lucide-lightbulb",
+    to: "/categorias/consultoria",
+  },
+]);
 </script>
+
+<template>
+  <div>
+    <section class="px-8 py-6">
+      <UPageCTA
+        title="Conectando Jovens talentos com sonhos"
+        description="Conectamos empresas e profissionais talentosos em Angola."
+        variant="naked"
+        orientation="horizontal"
+        :links="links"
+      >
+        <img
+          src="~/assets/img/work.jpg"
+          class="rounded-sm w-full h-full object-cover"
+        />
+      </UPageCTA>
+    </section>
+    <section class="px-8 py-30 space-y-10 flex space-x-10">
+      <div class="w-2/5">
+        <img src="~/assets/img/my_app.svg" class="h-full" alt="app" />
+      </div>
+      <div class="w-3/5 space-y-6 flex flex-col">
+        <div>
+          <span class="text-md uppercase font-semibold text-purple-600"
+            >categorias</span
+          >
+          <h2 class="text-3xl font-bold">
+            Explore as categorias mais populares
+          </h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+          <UPageCard
+            v-for="card in cards"
+            variant="ghost"
+            :key="card.title"
+            :title="card.title"
+            :description="card.description"
+            :icon="card.icon"
+            :to="card.to"
+          />
+        </div>
+      </div>
+    </section>
+  </div>
+</template>

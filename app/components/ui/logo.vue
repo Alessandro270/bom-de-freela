@@ -5,12 +5,12 @@ defineProps<{ to?: string; size?: string }>();
 <template>
   <NuxtLink
     :to="to ?? '/'"
-    class="font-semibold capitalize flex items-center space-x-2"
+    class="font-medium capitalize flex items-center space-x-2"
     :class="`text-${size || 'xl'}`"
   >
     <Icon
       name="line-md:briefcase-check-filled"
-      class="text-purple-600"
+      class="text-primary"
       size="1.95rem"
       mode="svg"
     />

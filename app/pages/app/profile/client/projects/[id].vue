@@ -18,36 +18,30 @@ const proofFile = ref<File | null>(null);
 <template>
   <AppLayoutWrapper>
     <div class="space-y-5 pb-10">
-      <!-- Breadcrumb + estado -->
-      <div class="flex items-center justify-between">
-        <nav class="flex items-center gap-1 text-xs text-gray-500 dark:text-gray-400">
-          <NuxtLink
-            to="/app/profile/client/projects"
-            class="hover:text-gray-900 dark:hover:text-white transition-colors"
-          >
-            Projetos
-          </NuxtLink>
-          <UIcon name="i-lucide-chevron-right" class="h-3 w-3" />
-          <span class="text-gray-900 dark:text-white">Detalhes do projeto</span>
-        </nav>
-        <UBadge :color="statusConfig.color" variant="soft" size="md">
-          {{ statusConfig.label }}
-        </UBadge>
-      </div>
-
       <!-- Cabeçalho do projeto -->
       <UCard>
         <template #header>
           <div class="space-y-3 py-1">
-            <h1
-              class="text-xl font-semibold text-gray-900 dark:text-white leading-snug"
-            >
-              Desenvolvimento de plataforma e-commerce com Nuxt 3
-            </h1>
+            <div class="flex justify-between items-center">
+              <h1
+                class="text-xl font-semibold text-gray-900 dark:text-white leading-snug"
+              >
+                Desenvolvimento de plataforma e-commerce com Nuxt 3
+              </h1>
+              <UBadge :color="statusConfig.color" variant="soft" size="md">
+                {{ statusConfig.label }}
+              </UBadge>
+            </div>
             <div class="flex flex-wrap gap-2">
-              <UBadge color="neutral" variant="outline" size="sm">Tecnologia</UBadge>
-              <UBadge color="neutral" variant="outline" size="sm">Desenvolvimento Web</UBadge>
-              <UBadge color="neutral" variant="outline" size="sm">Prazo: 30 dias</UBadge>
+              <UBadge color="neutral" variant="outline" size="sm"
+                >Tecnologia</UBadge
+              >
+              <UBadge color="neutral" variant="outline" size="sm"
+                >Desenvolvimento Web</UBadge
+              >
+              <UBadge color="neutral" variant="outline" size="sm"
+                >Prazo: 30 dias</UBadge
+              >
             </div>
           </div>
         </template>
@@ -56,10 +50,16 @@ const proofFile = ref<File | null>(null);
       <!-- Métricas -->
       <div class="grid grid-cols-3 gap-4">
         <UCard>
-          <AppUiHeaderDescGroup title="Valor do contrato" description="AOA 320.000" />
+          <AppUiHeaderDescGroup
+            title="Valor do contrato"
+            description="AOA 320.000"
+          />
         </UCard>
         <UCard>
-          <AppUiHeaderDescGroup title="Prazo de entrega" description="30 dias" />
+          <AppUiHeaderDescGroup
+            title="Prazo de entrega"
+            description="30 dias"
+          />
         </UCard>
         <UCard>
           <AppUiHeaderDescGroup title="Aceite em" description="10/03/2026" />
@@ -123,14 +123,16 @@ const proofFile = ref<File | null>(null);
 
           <!-- Descrição -->
           <div class="space-y-1.5">
-            <p class="text-xs text-gray-400 dark:text-gray-500 uppercase tracking-wide font-medium">
+            <p
+              class="text-xs text-gray-400 dark:text-gray-500 uppercase tracking-wide font-medium"
+            >
               Descrição
             </p>
             <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
               Desenvolvimento completo de uma plataforma de e-commerce com
-              sistema de autenticação, gestão de encomendas, pagamentos integrados
-              e painel administrativo. O projeto inclui design responsivo e
-              integração com APIs de pagamento locais.
+              sistema de autenticação, gestão de encomendas, pagamentos
+              integrados e painel administrativo. O projeto inclui design
+              responsivo e integração com APIs de pagamento locais.
             </p>
           </div>
 
@@ -138,15 +140,27 @@ const proofFile = ref<File | null>(null);
 
           <!-- Habilidades -->
           <div class="space-y-2">
-            <p class="text-xs text-gray-400 dark:text-gray-500 uppercase tracking-wide font-medium">
+            <p
+              class="text-xs text-gray-400 dark:text-gray-500 uppercase tracking-wide font-medium"
+            >
               Habilidades requeridas
             </p>
             <div class="flex flex-wrap gap-2">
-              <UBadge color="neutral" variant="outline" size="sm">Vue.js</UBadge>
-              <UBadge color="neutral" variant="outline" size="sm">Node.js</UBadge>
-              <UBadge color="neutral" variant="outline" size="sm">PostgreSQL</UBadge>
-              <UBadge color="neutral" variant="outline" size="sm">Nuxt.js</UBadge>
-              <UBadge color="neutral" variant="outline" size="sm">API REST</UBadge>
+              <UBadge color="neutral" variant="outline" size="sm"
+                >Vue.js</UBadge
+              >
+              <UBadge color="neutral" variant="outline" size="sm"
+                >Node.js</UBadge
+              >
+              <UBadge color="neutral" variant="outline" size="sm"
+                >PostgreSQL</UBadge
+              >
+              <UBadge color="neutral" variant="outline" size="sm"
+                >Nuxt.js</UBadge
+              >
+              <UBadge color="neutral" variant="outline" size="sm"
+                >API REST</UBadge
+              >
             </div>
           </div>
 
@@ -164,8 +178,13 @@ const proofFile = ref<File | null>(null);
               />
               <template #header>
                 <div class="flex items-center gap-2">
-                  <UIcon name="i-lucide-alert-triangle" class="h-4 w-4 text-red-500" />
-                  <span class="text-sm font-semibold text-red-600 dark:text-red-400">
+                  <UIcon
+                    name="i-lucide-alert-triangle"
+                    class="h-4 w-4 text-red-500"
+                  />
+                  <span
+                    class="text-sm font-semibold text-red-600 dark:text-red-400"
+                  >
                     Cancelar contrato
                   </span>
                 </div>
@@ -191,7 +210,12 @@ const proofFile = ref<File | null>(null);
 
             <!-- Enviar comprovativo (visível quando concluído) -->
             <div v-if="status === 'concluido'" class="flex items-center gap-3">
-              <UBadge color="success" variant="soft" icon="i-lucide-check-circle" size="sm">
+              <UBadge
+                color="success"
+                variant="soft"
+                icon="i-lucide-check-circle"
+                size="sm"
+              >
                 Projeto concluído
               </UBadge>
               <UModal>
@@ -203,8 +227,13 @@ const proofFile = ref<File | null>(null);
                 />
                 <template #header>
                   <div class="flex items-center gap-2">
-                    <UIcon name="i-lucide-file-check" class="h-4 w-4 text-gray-500" />
-                    <span class="text-sm font-semibold text-gray-700 dark:text-gray-300">
+                    <UIcon
+                      name="i-lucide-file-check"
+                      class="h-4 w-4 text-gray-500"
+                    />
+                    <span
+                      class="text-sm font-semibold text-gray-700 dark:text-gray-300"
+                    >
                       Enviar comprovativo de pagamento
                     </span>
                   </div>
@@ -216,7 +245,11 @@ const proofFile = ref<File | null>(null);
                       recibo de pagamento referente a este projeto.
                     </p>
                     <UFormField label="Comprovativo" name="proof">
-                      <UInput type="file" class="w-full" accept=".pdf,.jpg,.jpeg,.png" />
+                      <UInput
+                        type="file"
+                        class="w-full"
+                        accept=".pdf,.jpg,.jpeg,.png"
+                      />
                     </UFormField>
                     <UFormField label="Observações" name="notes">
                       <UTextarea
@@ -243,7 +276,9 @@ const proofFile = ref<File | null>(null);
 
             <!-- Enquanto não concluído: mostrar comprovativo desabilitado com tooltip -->
             <div v-else>
-              <UTooltip text="Disponível após o projeto ser marcado como concluído">
+              <UTooltip
+                text="Disponível após o projeto ser marcado como concluído"
+              >
                 <UButton
                   color="primary"
                   variant="soft"

@@ -1,11 +1,9 @@
 <template>
-  <div>
+  <UApp>
     <LayoutHeader />
-    <main
-      class="relative min-h-screen text-slate-50 from-[#0b122d] to-purple-950 bg-linear-to-tl"
-    >
+    <UMain class="min-h-screen text-slate-50 bg-[#0b122d]">
       <slot />
-    </main>
+    </UMain>
     <LayoutFooter />
-  </div>
+  </UApp>
 </template>

@@ -7,3 +7,30 @@
   --font-google: "Google Sans", sans-serif;
   --font-side: "Josefin Sans", sans-serif;
 }
+
+@theme static {
+  --color-brand-50: #faf0ff;
+  --color-brand-100: #f2d9ff;
+  --color-brand-200: #e5b3ff;
+  --color-brand-300: #d280ff;
+  --color-brand-400: #bf4dff;
+  --color-brand-500: #a81aff;
+  --color-brand-600: #8200db;
+  --color-brand-700: #6600af;
+  --color-brand-800: #4d0083;
+  --color-brand-900: #350059;
+  --color-brand-950: #1e0033;
+}
+
+:root {
+  --ui-radius: 0.375rem;
+}
+
+:root,
+.light {
+  --ui-text-highlighted: var(--ui-color-brand-700);
+}
+
+.dark {
+  --ui-text-highlighted: var(--ui-color-brand-200);
+}

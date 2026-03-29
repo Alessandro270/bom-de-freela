@@ -16,12 +16,6 @@
         </ul>
       </div>
       <div>
-        <h1 class="text-lg font-semibold mb-2">Empresa</h1>
-        <ul class="text-slate-500 space-y-1.5 font-medium text-sm">
-          <li>Sobre nós</li>
-        </ul>
-      </div>
-      <div>
         <h2 class="text-sm font-semibold mb-3">Conta</h2>
         <ul class="text-slate-500 space-y-1.5 text-sm">
           <li><NuxtLink to="/auth/sign-up">Criar conta</NuxtLink></li>
@@ -29,9 +23,10 @@
         </ul>
       </div>
     </div>
-    <div class="flex items-center justify-center h-14 border-t border-slate-800 text-slate-500 text-xs">
+    <div
+      class="flex items-center justify-center h-14 border-t border-slate-800 text-slate-500 text-xs"
+    >
       Copyright &copy; 2026 Bom de Freela. Todos os direitos reservados.
     </div>
   </footer>
 </template>
-

@@ -29,7 +29,9 @@
         </div>
 
         <div class="flex flex-col items-end gap-2 shrink-0">
-          <p class="text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wide">
+          <p
+            class="text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wide"
+          >
             Preço inicial
           </p>
           <p class="text-base font-bold text-primary-500">500 mil Kz</p>
@@ -56,7 +58,11 @@
       <!-- Footer: Client + Tags -->
       <div class="flex items-center justify-between gap-4 pt-1">
         <div class="flex items-center gap-3">
-          <UAvatar alt="Alessandro Almeida" size="xs" class="bg-blue-600 shrink-0" />
+          <UAvatar
+            alt="Alessandro Almeida"
+            size="xs"
+            class="bg-blue-600 shrink-0"
+          />
           <div>
             <p class="text-xs font-semibold text-gray-700 dark:text-gray-300">
               Alessandro Almeida

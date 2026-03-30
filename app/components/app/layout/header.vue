@@ -1,6 +1,68 @@
+<script lang="ts" setup>
+import type { DropdownMenuItem, NavigationMenuItem } from "@nuxt/ui";
+
+const route = useRoute();
+
+const dropdownItems = computed(() => [
+  [
+    {
+      label: "Perfil de freelancer",
+      to: "/app/profile/freelancer",
+    },
+    {
+      label: "Perfil de cliente",
+      to: "/app/profile/client",
+    },
+  ],
+  [
+    {
+      label: "Configurações",
+      to: "/app/settings",
+    },
+    {
+      label: "Notificações",
+    },
+  ],
+  {
+    label: "Sair",
+    to: "/logout",
+  },
+]);
+
+const items = computed<NavigationMenuItem[]>(() => [
+  {
+    label: "Encontrar trabalho",
+    to: "/app/proposals",
+    active: route.path.startsWith("/app/proposals"),
+  },
+  {
+    label: "Freelancers",
+    to: "/app/freelancers",
+    active: route.path.startsWith("/app/freelancers"),
+  },
+  {
+    label: "Clientes",
+    to: "/app/clients",
+    active: route.path.startsWith("/app/clients"),
+  },
+]);
+</script>
+
 <template>
-  <header class="bg-slate-800 px-20 h-17 flex items-center">
-    <UiLogo size="md" />
+  <UHeader>
+    <template #title>
+      <UiLogo size="md" />
+    </template>
+    <UNavigationMenu :items="items" class="gap-4 flex" />
+    <template #right>
+      <div class="flex gap-4 items-center-safe justify-center">
+        <AppUiButtonNotifications />
+        <AppUiButtonAccount />
+      </div>
+    </template>
+  </UHeader>
+  <!-- <header class="bg-slate-800 px-20 h-17 flex items-center"> -->
+  <!-- <UiLogo size="md" />
     <nav class="ml-10 h-full">
       <ul class="flex items-center space-x-6 h-full">
         <li>
@@ -36,6 +98,6 @@
       <li>
         <AppUiButtonAccount />
       </li>
-    </ul>
-  </header>
+    </ul> -->
+  <!-- </header> -->
 </template>

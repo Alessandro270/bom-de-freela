@@ -27,6 +27,7 @@
       <!-- Notifications -->
       <UButton
         icon="i-lucide-bell"
+        class="relative"
         color="neutral"
         variant="ghost"
         size="sm"
@@ -44,13 +45,10 @@
 
       <!-- Admin Avatar Menu -->
       <UDropdownMenu
-        :items="[
-          [{ label: 'Perfil', icon: 'i-lucide-user' }],
-          [{ label: 'Sair', icon: 'i-lucide-log-out', color: 'error' }],
-        ]"
+        :items="[[{ label: 'Sair', icon: 'i-lucide-log-out', color: 'error' }]]"
       >
         <div
-          class="flex items-center gap-2.5 cursor-pointer rounded-full border border-slate-700 px-3 py-1.5 hover:border-slate-500 transition-colors"
+          class="flex items-center gap-2.5 cursor-pointer rounded-full border border-slate-700 px-1 py-1.5 hover:border-slate-500 transition-colors"
         >
           <div
             class="h-7 w-7 rounded-full bg-primary flex items-center justify-center text-xs font-bold text-white"

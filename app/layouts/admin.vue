@@ -1,6 +1,6 @@
 <template>
   <UApp>
-    <div class="min-h-screen bg-slate-950 text-slate-50 flex flex-col">
+    <div class="min-h-screen bg-slate-800 text-slate-50 flex flex-col">
       <!-- Top Header -->
       <AdminLayoutHeader />
 
